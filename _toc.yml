@@ -1,0 +1,23 @@
+format: jb-book
+root: content/intro
+parts:
+- caption: Resources
+  chapters:
+  - file: content/Download_Data
+  - url: https://dartbrains.org/content/Introduction_to_Programming.html
+    title: Introduction to Programming in Python
+  - url: https://dartbrains.org/content/Introduction_to_Pandas.html
+    title: Introduction to Pandas
+  - url: https://dartbrains.org/content/Introduction_to_Plotting.html
+    title: Introduction to Plotting in Python
+  - url: https://dartbrains.org/content/Introduction_to_Neuroimaging_Data.html
+    title: Introduction to Neuroimaging Data with Python
+  - url: https://dartbrains.org/
+    title: Dartbrains Neuroimaging Course
+  - url: http://naturalistic-data.org/
+    title: Naturalistic Data Analysis Course
+- caption: Contributing
+  chapters:
+  - file: content/Contributing
+  - url: https://github.com/computational-san/sans_data_competition
+    title: GitHub Repository
