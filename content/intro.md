@@ -1,5 +1,5 @@
 # CompSAN Naturalistic fMRI Data Analysis Challenge 2022
-CompSAN is very excited to announce the inaugural Naturalistic fMRI Data Analysis Challenge for SANS 2022. Naturalistic functional magnetic resonance imaging provides a unique opportunity to study the neural basis of social, cognitive, and affective processing. Data from naturalistic conditions are rich and dynamic, and present both an opportunity and a challenge to analysis methods.
+CompSAN is very excited to announce the inaugural Naturalistic fMRI Data Analysis Challenge for SANS 2022. Naturalistic functional magnetic resonance imaging (fMRI) provides a unique opportunity to study the neural basis of social, cognitive, and affective processing. Data from naturalistic conditions are rich and dynamic, and present both an opportunity and a challenge to analysis methods.
 
 This data challenge provides the chance to demonstrate the application of new algorithms and models to naturalistic fMRI data, in order to shed new light on social and affective neural processing at the intra- and/or inter-subject level. We welcome submissions from all levels of imaging experience, from individual trainees new to naturalistic data to groups well established in this approach.
 
@@ -21,13 +21,13 @@ Entries for the competitive portion of the challenge will be judged on:
 Winners and prizes will be announced during the computational symposium at the 2022 SANS conference. Entrants are also welcome to opt-out of the competition and enter just for fun/learning.
 
 ## How to enter the challenge:
-1. First, download the FridayNightLights_Study2 Dataset dataset here:
+1. First, download the FridayNightLights_Study2 Dataset dataset {doc}`here <../content/Download_Data.md>`:
 
-2. If you are new to naturalistic data processing, we recommend that you run through the Naturalistic Data Analysis tutorials here: https://naturalistic-data.org/content/intro.html
+2. If you are new to naturalistic data processing, we recommend that you run through the Naturalistic Data Analysis tutorials here: https://naturalistic-data.org
 
 3. Form a team, or work solo. Once you are ready, register your team/individual entry (link). Registration is free, and will open March 4th, 2022. You may enter as late as the day of submission.
 
-4. Join the Slack (link).
+4. Post questions to the [CompSAN Discourse Page](https://www.askpbs.org/c/compsan-data-competition/25).
 
 5. Submit a poster and extended abstract (3 pages), and notebook/matlab script (w details on associated dependencies). The abstract should include separate sections for background, methods, results and conclusions. Entrants will have the option of making their notebook/scripts publicly available. The deadline for submissions is April 2nd, 2022. At the time of submission, you will be given the opportunity to opt-out of competition.
 

@@ -1,21 +1,35 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # Download Data
+# # Data
 # 
-# *Written by Luke Chang*
+# For this data competition, we will be using the Friday Night Lights dataset from:
 # 
-# Many of the imaging tutorials throughout this course will use open data from the Pinel Localizer task.
+# Chang, L. J., Jolly, E., Cheong, J. H., Rapuano, K. M., Greenstein, N., Chen, P. H. A., & Manning, J. R. (2021). Endogenous variation in ventromedial prefrontal cortex state dynamics during naturalistic viewing reflects affective experience. *Science Advances, 7(17), eabf7129*.
 # 
-# The Pinel Localizer task was designed to probe several different types of basic cognitive processes, such as visual perception, finger tapping, language, and math. Several of the tasks are cued by reading text on the screen (i.e., visual modality) and also by hearing auditory instructions (i.e., auditory modality). The trials are randomized across conditions and have been optimized to maximize efficiency for a rapid event related design. There are 100 trials in total over a 5-minute scanning session. Read the original [paper](https://bmcneurosci.biomedcentral.com/articles/10.1186/1471-2202-8-91) for more specific details about the task and the [dataset paper](https://doi.org/10.1016/j.neuroimage.2015.09.052). 
+# In this dataset, participants (n=35) watched the pilot episode of the NBC television show Friday Night Lights while undergoing fMRI. We are sharing the raw data in the BIDS format. We are also sharing data that has been preprocessed using fMRIPrep version 20.2.1. See ```derivatives/code/fmriprep.sh``` for the script used to run preprocessing. We have also performed denoising on the preprocessed data by running a univariate GLM, which included the following regressors:
 # 
-# This dataset is well suited for these tutorials as it is (a) publicly available to anyone in the world, (b) relatively small (only about 5min), and (c) provides many options to create different types of contrasts.
+# - Intercept, Linear & Quatdratic Trends (3)
+# - Expanded Realignment Parameters (24). Derivatives, quadratics, quadratic derivatives
+# - Spikes based on global outliers greater than 3 SD and also based on average frame differencing
+# - CSF regressor (1)
 # 
-# There are a total of 94 subjects available, but we will primarily only be working with a smaller subset of about 15.
+# See ```derivatives/code/Denoise_Preprocessed_Data.ipynb``` file for full details of the denoising model. We have included denoised data that is unsmoothed and also has been smoothed with a 6mm FWHM Gaussian kernel. We have included nifti and hdf5 versions of the data. Nifti files can be loaded using any software. HDF5 files are much faster to load if you are using our [nltools](https://nltools.org/) toolbox for your data analyses. Note that subject sub-sid000496 had bad normalization using this preprocessing pipeline, so we have not included this participant in the denoised data. 
 # 
-# Though the data is being shared on the [OSF website](https://osf.io/vhtf6/files/), we recommend downloading it from our [g-node repository](https://gin.g-node.org/ljchang/Localizer) as we have fixed a few issues with BIDS formatting and have also performed preprocessing using fmriprep.
 # 
-# In this notebook, we will walk through how to access the datset using DataLad. Note, that the entire dataset is fairly large (~42gb), but the tutorials will mostly only be working with a small portion of the data (5.8gb), so there is no need to download the entire thing. If you are taking the Psych60 course at Dartmouth, we have already made the data available on the jupyterhub server.
+# We are also sharing additional data from this paper, which may be used in projects:
+# 
+# - Study 1 (n=13) fMRI Data viewing episodes 1 & 2 - Available on [OpenNeuro](https://openneuro.org/datasets/ds003524).
+# 
+# - Study 3 (n=20) Face Expression Data - Available on [OSF](https://osf.io/f9gyd/). We are only sharing extracted Action Unit Values. We do not have permission to share raw video data.
+# 
+# - Study 4 (n=192) Emotion Ratings - Available on [OSF](https://osf.io/f9gyd/). Rating data was collected on Amazon Mechanical Turk using a custom Flask [web application](https://github.com/cosanlab/moth_app).
+# 
+# - Code from the original paper is available on [Github](https://github.com/cosanlab/vmPFC_dynamics)
+# 
+# # Downloading Data
+# 
+# All of the data is being hosted by [OpenNeuro](https://openneuro.org/datasets/ds003521). The entire dataset is about 16gb and can be downloaded directly from the website and also using the AWS command line interface. See the OpenNeuro [instructions](https://openneuro.org/datasets/ds003521/download) for downloading. If you have limited storage space, we recommend using Datalad to download only the files you want to work with. 
 # 
 
 # ## DataLad
@@ -24,7 +38,7 @@
 # 
 # While DataLad offers a number of useful features for working with datasets, there are three in particular that we think make it worth the effort to install for this course.
 # 
-# 1) Cloning a DataLad Repository can be completed with a single line of code `datalad clone <repository>` and provides the full directory structure in the form of symbolic links. This allows you to explore all of the files in the dataset, without having to download the entire dataset at once.
+# 1) Cloning a DataLad Repository can be completed with a single line of code `datalad install <repository>` and provides the full directory structure in the form of symbolic links. This allows you to explore all of the files in the dataset, without having to download the entire dataset at once.
 # 
 # 2) Specific files can be easily downloaded using `datalad get <filename>`, and files can be removed from your computer at any time using `datalad drop <filename>`. As these datasets are large, this will allow you to only work with the data that you need for a specific tutorial and you can drop the rest when you are done with it.
 # 
@@ -59,16 +73,18 @@ get_ipython().system('pip install datalad')
 
 # ### Download Data with DataLad
 # 
-# The Pinel localizer dataset can be accessed at the following location https://gin.g-node.org/ljchang/Localizer/. To download the Localizer dataset run `datalad install https://gin.g-node.org/ljchang/Localizer` in a terminal in the location where you would like to install the dataset. Don't forget to change the directory to a folder on your local computer. The full dataset is approximately 42gb.
+# The FNL dataset can be accessed at the following location https://openneuro.org/datasets/ds003521. To download the dataset run `datalad install https://github.com/OpenNeuroDatasets/ds003521.git` in a terminal in the location where you would like to install the dataset. Don't forget to change the directory to a folder on your local computer. The full dataset is approximately 16gb.
 # 
 # You can run this from the notebook using the `!` cell magic.
 
-# In[3]:
+# In[7]:
 
 
-get_ipython().run_line_magic('cd', '~/Dropbox/Dartbrains/data')
+get_ipython().system('mkdir ~/Downloads/FridayNightLights ')
 
-get_ipython().system('datalad install https://gin.g-node.org/ljchang/Localizer')
+get_ipython().system('cd ~/Downloads/FridayNightLights')
+
+get_ipython().system('datalad install https://github.com/OpenNeuroDatasets/ds003521.git')
 
 
 # ## Datalad Basics
@@ -77,20 +93,20 @@ get_ipython().system('datalad install https://gin.g-node.org/ljchang/Localizer')
 # 
 # You can check to see how big the entire dataset would be if you downloaded everything using `datalad status`.
 
-# In[3]:
+# In[6]:
 
 
-get_ipython().run_line_magic('cd', '~/Dropbox/Dartbrains/data/Localizer')
+get_ipython().run_line_magic('cd', '~/Downloads/FridayNightLights/ds003521')
 
 get_ipython().system('datalad status --annex')
 
 
 # ### Getting Data
-# One of the really nice features of datalad is that you can see all of the data without actually storing it on your computer. When you want a specific file you use `datalad get <filename>` to download that specific file. Importantly, you do not need to download all of the dat at once, only when you need it.
+# One of the really nice features of datalad is that you can see all of the data without actually storing it on your computer. When you want a specific file you use `datalad get <filename>` to download that specific file. Importantly, you do not need to download all of the data at once, only when you need it.
 # 
 # Now that we have cloned the repository we can grab individual files. For example, suppose we wanted to grab the first subject's confound regressors generated by fmriprep.
 
-# In[4]:
+# In[8]:
 
 
 get_ipython().system('datalad get participants.tsv')
@@ -98,7 +114,7 @@ get_ipython().system('datalad get participants.tsv')
 
 # Now we can check and see how much of the total dataset we have downloaded using `datalad status`
 
-# In[7]:
+# In[9]:
 
 
 get_ipython().system('datalad status --annex all')
@@ -106,14 +122,14 @@ get_ipython().system('datalad status --annex all')
 
 # If you would like to download all of the files you can use `datalad get .`. Depending on the size of the dataset and the speed of your internet connection, this might take awhile. One really nice thing about datalad is that if your connection is interrupted you can simply run `datalad get .` again, and it will resume where it left off.
 # 
-# You can also install the dataset and download all of the files with a single command `datalad install -g https://gin.g-node.org/ljchang/Localizer`. You may want to do this if you have a lot of storage available and a fast internet connection. For most people, we recommend only downloading the files you need for a specific tutorial.
+# You can also install the dataset and download all of the files with a single command `datalad install -g https://github.com/OpenNeuroDatasets/ds003521.git`. You may want to do this if you have a lot of storage available and a fast internet connection. For most people, we recommend only downloading the files you need for your project.
 
 # ### Dropping Data
 # Most people do not have unlimited space on their hard drives and are constantly looking for ways to free up space when they are no longer actively working with files. Any file in a dataset can be removed using `datalad drop`. Importantly, this does not delete the file, but rather removes it from your computer. You will still be able to see file metadata after it has been dropped in case you want to download it again in the future.
 # 
 # As an example, let's drop the Localizer participants .tsv file.
 
-# In[8]:
+# In[10]:
 
 
 get_ipython().system('datalad drop participants.tsv')
@@ -124,7 +140,7 @@ get_ipython().system('datalad drop participants.tsv')
 # 
 # For example, suppose you would like to clone a data repository, such as the Localizer dataset. You can run `dl.clone(source=url, path=location)`. Make sure you set `localizer_path` to the location where you would like the Localizer repository installed.
 
-# In[5]:
+# In[11]:
 
 
 import os
@@ -132,9 +148,9 @@ import glob
 import datalad.api as dl
 import pandas as pd
 
-localizer_path = '/Users/lukechang/Dropbox/Dartbrains/data/Localizer'
+localizer_path = '~/Downloads/FridayNightLights'
 
-dl.clone(source='https://gin.g-node.org/ljchang/Localizer', path=localizer_path)
+dl.clone(source='https://github.com/OpenNeuroDatasets/ds003521.git', path=localizer_path)
 
 
 # We can now create a dataset instance using `dl.Dataset(path_to_data)`.
@@ -202,10 +218,10 @@ confounds = pd.read_csv(file_list[0], sep='\t')
 # 
 # Let's actually download one of the files we will be using in the tutorial. First, let's use glob to get a list of all of the functional data that has been preprocessed by fmriprep, denoised, and smoothed.
 
-# In[18]:
+# In[12]:
 
 
-file_list = glob.glob(os.path.join(localizer_path, 'derivatives', 'fmriprep', '*', 'func', '*task-localizer_space-MNI152NLin2009cAsym_desc-preproc_bold.nii.gz'))
+file_list = glob.glob(os.path.join(localizer_path, 'derivatives', 'smoothed', '*_task-movie_run-1_space-MNI152NLin2009cAsym_desc-preproc_trim_smooth6_denoised_bold.hdf5'))
 file_list.sort()
 file_list
 
@@ -225,47 +241,3 @@ result = ds.get(file_list[0])
 
 result = ds.status(annex='all')
 
-
-# ## Download Data for Course
-# Now let's download the data we will use for the course. We will download:
-# - `sub-S01`'s raw data
-# - experimental metadata
-# - preprocessed data for the first 20 subjects including the fmriprep QC reports.
-# 
-
-# In[17]:
-
-
-result = ds.get(os.path.join(localizer_path, 'sub-S01'))
-result = ds.get(glob.glob(os.path.join(localizer_path, '*.json')))
-result = ds.get(glob.glob(os.path.join(localizer_path, '*.tsv')))
-result = ds.get(glob.glob(os.path.join(localizer_path, 'phenotype')))
-
-
-# In[16]:
-
-
-file_list = glob.glob(os.path.join(localizer_path, '*', 'fmriprep', 'sub*'))
-file_list.sort()
-for f in file_list[:20]:
-    result = ds.get(f)
-
-
-# To get the python packages for the course be sure to read the installation {ref}`instructions <python-packages>` in the {doc}`../content/Introduction_to_JupyterHub` tutorial.
-
-# (run-preprocessing)= 
-# ## Preprocessing
-# The data has already been preprocessed using [fmriprep](https://fmriprep.readthedocs.io/en/stable/), which is a robust, but opinionated automated preprocessing pipeline developed by [Russ Poldrack's group at Stanford University](https://poldracklab.stanford.edu/). The developer's have made a number of choices about how to preprocess your fMRI data using best practices and have created an automated pipeline using multiple software packages that are all distributed via a [docker container](https://fmriprep.readthedocs.io/en/stable/docker.html).
-# 
-# Though, you are welcome to just start working right away with the preprocessed data, here are the steps to run it yourself:
-# 
-#  - 1. Install [Docker](https://www.docker.com/) and download image
-#      
-#      `docker pull poldracklab/fmriprep:<latest-version>`
-# 
-# 
-#  - 2. Run a single command in the terminal specifying the location of the data, the location of the output, the participant id, and a few specific flags depending on specific details of how you want to run the preprocessing.
-# 
-#     `fmriprep-docker /Users/lukechang/Dropbox/Dartbrains/Data/localizer /Users/lukechang/Dropbox/Dartbrains/Data/preproc participant --participant_label sub-S01 --write-graph --fs-no-reconall --notrack --fs-license-file ~/Dropbox/Dartbrains/License/license.txt --work-dir /Users/lukechang/Dropbox/Dartbrains/Data/work`
-#     
-# In practice, it's alway a little bit finicky to get everything set up on a particular system. Sometimes you might run into issues with a specific missing file like the [freesurfer license](https://fmriprep.readthedocs.io/en/stable/usage.html#the-freesurfer-license) even if you're not using it. You might also run into issues with the format of the data that might have some conflicts with the [bids-validator](https://github.com/bids-standard/bids-validator). In our experience, there is always some frustrations getting this to work, but it's very nice once it's done.
