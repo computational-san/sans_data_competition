@@ -1,9 +1,13 @@
 format: jb-book
 root: content/intro
 parts:
-- caption: Resources
+- caption: Information
   chapters:
   - file: content/Download_Data
+  - file: content/Registration
+  - file: content/Submission
+- caption: Additional Resources
+  chapters:
   - url: https://dartbrains.org/content/Introduction_to_Programming.html
     title: Introduction to Programming in Python
   - url: https://dartbrains.org/content/Introduction_to_Pandas.html
@@ -16,8 +20,4 @@ parts:
     title: Dartbrains Neuroimaging Course
   - url: http://naturalistic-data.org/
     title: Naturalistic Data Analysis Course
-- caption: Contributing
-  chapters:
-  - file: content/Contributing
-  - url: https://github.com/computational-san/sans_data_competition
-    title: GitHub Repository
+

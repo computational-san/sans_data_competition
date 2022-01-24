@@ -1,31 +1,31 @@
-# CompSAN Naturalistic fMRI Data Analysis Challenge 2022
-CompSAN is very excited to announce the inaugural Naturalistic fMRI Data Analysis Challenge for SANS 2022. Naturalistic functional magnetic resonance imaging (fMRI) provides a unique opportunity to study the neural basis of social, cognitive, and affective processing. Data from naturalistic conditions are rich and dynamic, and present both an opportunity and a challenge to analysis methods.
+# Overview
+CompSAN is very excited to announce the inaugural **SANS 2022 Naturalistic fMRI Data Analysis Challenge**. Naturalistic functional magnetic resonance imaging (fMRI) provides a unique opportunity to study the neural basis of social, cognitive, and affective processing. Data from naturalistic conditions are rich and dynamic, and present both an opportunity and a challenge to analysis methods.
 
-This data challenge provides the chance to demonstrate the application of new algorithms and models to naturalistic fMRI data, in order to shed new light on social and affective neural processing at the intra- and/or inter-subject level. We welcome submissions from all levels of imaging experience, from individual trainees new to naturalistic data to groups well established in this approach.
+This data challenge provides the chance to demonstrate the application of new algorithms and models to naturalistic fMRI data to shed new light on social and affective neural processing at the intra- and/or inter-subject level. We welcome submissions from all levels of imaging experience, from individual trainees new to naturalistic data to groups well established in this approach.
 
 The goals of the challenge include: 
 1. Increasing a diversity of analysis approaches in SANS community
 2. Advancing theory development based on computational approaches
 3. Providing a forum for trainees of all levels to develop and explore new computational/analytic skills. 
 
-While we are framing this challenge as a competition, we hope that this will be a fun and not-too-serious experience for everyone involved.
+While we are framing this challenge as a competition, we hope that this will be a positive experience for everyone involved.
 
 ## Judging Criteria
-There is no benchmark to work towards or specific problem in the data to discover. Instead, we encourage you to be creative!
+There is no objective benchmark or specific problem in the data to discover. Instead, we are primarily evaluating projects on creativity and utility.
 
 Entries for the competitive portion of the challenge will be judged on:
-1. Novelty/originality of analysis approach
-2. The connection between analysis approach and social and affective neuroscience theory/topics
-3. Robustness and replicability of results. 
+1. Novelty/originality of analysis approach (Has this been done before?)
+2. The connection between analysis approach and social and affective neuroscience theory/topics (What does this tell us about the brain or mind?)
+3. Robustness and replicability of results. (How robust are the results relative to the analytic choices? How much did you overfit your analysis to the dataset?)
 
 Winners and prizes will be announced during the computational symposium at the 2022 SANS conference. Entrants are also welcome to opt-out of the competition and enter just for fun/learning.
 
 ## How to enter the challenge:
-1. First, download the FridayNightLights_Study2 Dataset dataset {doc}`here <../content/Download_Data.md>`:
+1. First, download the FridayNightLights_Study2 Dataset dataset {doc}`here <../content/Download_Data>`:
 
-2. If you are new to naturalistic data processing, we recommend that you run through the Naturalistic Data Analysis tutorials here: https://naturalistic-data.org
+2. If you are new to naturalistic data processing, we encourage you to try applying methods described in the [Naturalistic Data Analysis tutorials](https://naturalistic-data.org)
 
-3. Form a team, or work solo. Once you are ready, register your team/individual entry (link). Registration is free, and will open March 4th, 2022. You may enter as late as the day of submission.
+3. Form a team, or work solo. Once you are ready, register your team/individual entry. Registration is free, and will open March 4th, 2022. You may enter as late as the day of submission.
 
 4. Post questions to the [CompSAN Discourse Page](https://www.askpbs.org/c/compsan-data-competition/25).
 

@@ -42,7 +42,7 @@ html:
   use_repository_button: true # Whether to add a link to your repository button
   use_issues_button: true # Whether to add an "open an issue" button
   extra_navbar: Post questions to <a href='https://www.askpbs.org/c/compsan-data-competition'>CompSAN Discourse</a> # Will be displayed underneath the left navbar.
-  extra_footer: This competition is supported by The Dartmouth Consortium for Interacting Minds and an NSF CAREER Award 1848370 to [Luke Chang](http://cosanlab.com). # Will be displayed underneath the footer.
+  extra_footer: This competition is supported by The Dartmouth Consortium for Interacting Minds and an NSF CAREER Award 1848370 to <a href='http://cosanlab.com'>Luke Chang</a>. # Will be displayed underneath the footer.
   google_analytics_id: 'UA-138270939-1' # A GA id that can be used to track book views.
   home_page_in_navbar: false # Whether to include your home page in the left Navigation Bar
   baseurl: '' # The base URL where your book will be hosted. Used for creating image previews and social links. e.g.: https://mypage.com/mybook/

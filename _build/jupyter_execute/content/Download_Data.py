@@ -1,21 +1,20 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # Data
+# # Accessing Data
 # 
 # For this data competition, we will be using the Friday Night Lights dataset from:
 # 
-# Chang, L. J., Jolly, E., Cheong, J. H., Rapuano, K. M., Greenstein, N., Chen, P. H. A., & Manning, J. R. (2021). Endogenous variation in ventromedial prefrontal cortex state dynamics during naturalistic viewing reflects affective experience. *Science Advances, 7(17), eabf7129*.
+# [Chang, L. J., Jolly, E., Cheong, J. H., Rapuano, K. M., Greenstein, N., Chen, P. H. A., & Manning, J. R. (2021). Endogenous variation in ventromedial prefrontal cortex state dynamics during naturalistic viewing reflects affective experience. *Science Advances, 7(17), eabf7129*.](https://www.science.org/doi/10.1126/sciadv.abf7129)
 # 
 # In this dataset, participants (n=35) watched the pilot episode of the NBC television show Friday Night Lights while undergoing fMRI. We are sharing the raw data in the BIDS format. We are also sharing data that has been preprocessed using fMRIPrep version 20.2.1. See ```derivatives/code/fmriprep.sh``` for the script used to run preprocessing. We have also performed denoising on the preprocessed data by running a univariate GLM, which included the following regressors:
 # 
-# - Intercept, Linear & Quatdratic Trends (3)
+# - Intercept, Linear & Quadratic Trends (3)
 # - Expanded Realignment Parameters (24). Derivatives, quadratics, quadratic derivatives
 # - Spikes based on global outliers greater than 3 SD and also based on average frame differencing
 # - CSF regressor (1)
 # 
-# See ```derivatives/code/Denoise_Preprocessed_Data.ipynb``` file for full details of the denoising model. We have included denoised data that is unsmoothed and also has been smoothed with a 6mm FWHM Gaussian kernel. We have included nifti and hdf5 versions of the data. Nifti files can be loaded using any software. HDF5 files are much faster to load if you are using our [nltools](https://nltools.org/) toolbox for your data analyses. Note that subject sub-sid000496 had bad normalization using this preprocessing pipeline, so we have not included this participant in the denoised data. 
-# 
+# See ```derivatives/code/Denoise_Preprocessed_Data.ipynb``` file for full details of the denoising model. We have included denoised data that is unsmoothed and also has been smoothed with a 6mm FWHM Gaussian kernel. We have included nifti and hdf5 versions of the data. Nifti files can be loaded using any software. HDF5 files are much faster to load if you are using our [nltools](https://nltools.org/) toolbox for your data analyses. Note that subject ```sub-sid000496``` had bad normalization using this preprocessing pipeline, so we have not included this participant in the denoised data. 
 # 
 # We are also sharing additional data from this paper, which may be used in projects:
 # 
@@ -29,18 +28,18 @@
 # 
 # # Downloading Data
 # 
-# All of the data is being hosted by [OpenNeuro](https://openneuro.org/datasets/ds003521). The entire dataset is about 16gb and can be downloaded directly from the website and also using the AWS command line interface. See the OpenNeuro [instructions](https://openneuro.org/datasets/ds003521/download) for downloading. If you have limited storage space, we recommend using Datalad to download only the files you want to work with. 
+# All of the data is being hosted by [OpenNeuro](https://openneuro.org/datasets/ds003521). The entire dataset is about 16gb and can be downloaded directly from the website and also using the AWS command line interface. See the OpenNeuro [instructions](https://openneuro.org/datasets/ds003521/download) for downloading. If you have limited storage space, we recommend using Datalad to only download the files you want to work with. We have included a brief overview of working with Datalad from the command line and within Python below.
 # 
 
 # ## DataLad
 # 
-# The easist way to access the data is using [DataLad](https://www.datalad.org/), which is an open source version control system for data built on top of [git-annex](https://git-annex.branchable.com/). Think of it like git for data. It provides a handy command line interface for downloading data, tracking changes, and sharing it with others.
+# We encourage participants to download the data using [DataLad](https://www.datalad.org/), which is an open source version control system for data built on top of [git-annex](https://git-annex.branchable.com/). Think of it like git for data. It provides a handy command line interface for downloading data, tracking changes, and sharing it with others.
 # 
-# While DataLad offers a number of useful features for working with datasets, there are three in particular that we think make it worth the effort to install for this course.
+# While DataLad offers a number of useful features for working with datasets, there are three in particular that we think make it worth the effort to install for this competition.
 # 
 # 1) Cloning a DataLad Repository can be completed with a single line of code `datalad install <repository>` and provides the full directory structure in the form of symbolic links. This allows you to explore all of the files in the dataset, without having to download the entire dataset at once.
 # 
-# 2) Specific files can be easily downloaded using `datalad get <filename>`, and files can be removed from your computer at any time using `datalad drop <filename>`. As these datasets are large, this will allow you to only work with the data that you need for a specific tutorial and you can drop the rest when you are done with it.
+# 2) Specific files can be easily downloaded using `datalad get <filename>`, and files can be removed from your computer at any time using `datalad drop <filename>`. As the dataset is relatively large, this will allow you to only work with the data that you need and you can drop the rest when you are done with it.
 # 
 # 3) All of the DataLad commands can be run within Python using the datalad [python api](http://docs.datalad.org/en/latest/modref.html).
 # 
@@ -77,23 +76,28 @@ get_ipython().system('pip install datalad')
 # 
 # You can run this from the notebook using the `!` cell magic.
 
-# In[7]:
+# In[16]:
 
 
-get_ipython().system('mkdir ~/Downloads/FridayNightLights ')
+import os
 
-get_ipython().system('cd ~/Downloads/FridayNightLights')
+download_path = '/Users/lukechang/Downloads/FridayNightLights'
+
+if not os.path.exists(download_path):
+    os.makedirs(download_path)
+
+get_ipython().run_line_magic('cd', '{download_path}')
 
 get_ipython().system('datalad install https://github.com/OpenNeuroDatasets/ds003521.git')
 
 
 # ## Datalad Basics
 # 
-# You might be surprised to find that after cloning the dataset that it barely takes up any space `du -sh`. This is because cloning only downloads the metadata of the dataset to see what files are included.
+# You might be surprised to find that after cloning the dataset that it barely takes up any space using `du -sh`. This is because cloning only downloads the metadata of the dataset to see what files are included.
 # 
 # You can check to see how big the entire dataset would be if you downloaded everything using `datalad status`.
 
-# In[6]:
+# In[17]:
 
 
 get_ipython().run_line_magic('cd', '~/Downloads/FridayNightLights/ds003521')
@@ -135,12 +139,12 @@ get_ipython().system('datalad status --annex all')
 get_ipython().system('datalad drop participants.tsv')
 
 
-# ## Datalad has a Python API!
+# ## Datalad has a Python API
 # One particularly nice aspect of datalad is that it has a Python API, which means that anything you would like to do with datalad in the commandline, can also be run in Python. See the details of the datalad [Python API](http://docs.datalad.org/en/latest/modref.html).
 # 
 # For example, suppose you would like to clone a data repository, such as the Localizer dataset. You can run `dl.clone(source=url, path=location)`. Make sure you set `localizer_path` to the location where you would like the Localizer repository installed.
 
-# In[11]:
+# In[18]:
 
 
 import os
@@ -148,7 +152,7 @@ import glob
 import datalad.api as dl
 import pandas as pd
 
-localizer_path = '~/Downloads/FridayNightLights'
+download_path = '/Users/lukechang/Downloads/FridayNightLights'
 
 dl.clone(source='https://github.com/OpenNeuroDatasets/ds003521.git', path=localizer_path)
 
@@ -158,7 +162,7 @@ dl.clone(source='https://github.com/OpenNeuroDatasets/ds003521.git', path=locali
 # In[6]:
 
 
-ds = dl.Dataset(localizer_path)
+ds = dl.Dataset(download_path)
 
 
 # How much of the dataset have we downloaded?  We can check the status of the annex using `ds.status(annex='all')`.
@@ -178,7 +182,7 @@ results = ds.status(annex='all')
 # In[14]:
 
 
-file_list = glob.glob(os.path.join(localizer_path, '*', 'fmriprep', '*', 'func', '*tsv'))
+file_list = glob.glob(os.path.join(download_path, 'derivatives', 'fmriprep', '*', 'func', '*tsv'))
 file_list.sort()
 file_list[:10]
 
@@ -221,7 +225,7 @@ confounds = pd.read_csv(file_list[0], sep='\t')
 # In[12]:
 
 
-file_list = glob.glob(os.path.join(localizer_path, 'derivatives', 'smoothed', '*_task-movie_run-1_space-MNI152NLin2009cAsym_desc-preproc_trim_smooth6_denoised_bold.hdf5'))
+file_list = glob.glob(os.path.join(download_path, 'derivatives', 'smoothed', '*_task-movie_run-1_space-MNI152NLin2009cAsym_desc-preproc_trim_smooth6_denoised_bold.hdf5'))
 file_list.sort()
 file_list
 
