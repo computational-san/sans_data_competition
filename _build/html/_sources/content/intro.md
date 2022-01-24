@@ -34,17 +34,21 @@ Winners and prizes will be announced during the computational symposium at the 2
 6. Especially important for trainees (at all stages): complete a survey on your learning experience and the challenges you faced.
 
 ## Struggling for inspiration? Here are some possible ideas:
-### Dynamics and hidden order in naturalistic imaging data revealed using machine learning
-Affective states and associated brain activity are highly dynamic. Spatial differences in the temporal dynamics of brain responses can lead to hidden order not fully captured by standard, statically-defined networks. Machine learning approaches might provide a powerful means to discover such hidden order.
+One exciting aspect of this challenge is that there are really an infinite number of possible things to try, which unfortunately can make it overwhelming to figure out where to begin. For inspiration for how different methods have been used to study naturalistic data more broadly, check out the [Naturalistic Data Analysis Tutorials](https://naturalistic-data.org/). You might be able to apply or modify one of those methods to ask a new question for social and affective neuroscience. Alternatively, you might think of a new questions and then try to create a new analysis method to answer your question.
+
+Here are a few project brainstorms that might spark some ideas. 
+
+### Encoding models of social cognition using naturalistic conditions
+Encoding models have been of great value in understanding sensory and perceptual responses to naturalistic stimuli. As the sophistication of computational models of social cognition increases, so does the potential to apply these as encoding models to understand the neural basis of social cognition. However, unlike sensory systems social cognition is often not directly related to the stimuli itself, which will likely require more sophisticated models to predict how people are encoding social information.
+
+### Dynamics and latent states in naturalistic imaging data
+Affective states and associated brain activity are highly dynamic. Spatial differences in the temporal dynamics of brain responses can lead to hidden or latent states not fully captured by standard, statically-defined patterns or networks. There are a number of methods that might help uncover these states. Is the state-space discrete or continuous? What level do you think this information is being represented in the brain? Within an ROI? Patterns across the brain? or maybe in network dynamics? 
 
 ### Nonlinear and/or time-warping methods for intersubject correlations
 Standard methods for measuring intersubject synchrony typically rely on linear correlations in the time domain. However, individual differences in the dynamics of spontaneous activity might not be noise, and methods that can account for speed/timing differences and nonlinear relationships between subjects might reveal new information about group-level synchrony.
 
-### Encoding models of social cognition using naturalistic conditions
-Encoding models have been of great value in understanding sensory and perceptual responses to naturalistic stimuli. As the sophistication of computational models of social cognition increases, so does the potential to apply these as encoding models to understand the neural basis of social cognition.
-
 ## Questions
-Please post any questions that arise on our [Discourse Page](https://www.askpbs.org/c/compsan-data-competition)
+Please post any questions that arise on our [Discourse Page](https://www.askpbs.org/c/compsan-data-competition). This might include getting feedback on project ideas or even looking for other members of the SANS community to form a team.
 
 ## Acknowledgements
 This competition is organized by James Thompson, Mark Thornton, and Luke Chang and is supported by The Dartmouth Consortium for Interacting Minds and an NSF CAREER Award 1848370 to [Luke Chang](http://cosanlab.com).
