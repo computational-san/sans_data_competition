@@ -23,9 +23,9 @@ Winners and prizes will be announced during the computational symposium at the 2
 ## How to enter the challenge:
 1. First, download the FridayNightLights_Study2 Dataset dataset {doc}`here <../content/Download_Data>`:
 
-2. If you are new to naturalistic data processing, we recommend that you run through the Naturalistic Data Analysis tutorials here: https://naturalistic-data.org
+2. If you are new to naturalistic data processing, we encourage you to try applying methods described in the [Naturalistic Data Analysis tutorials](https://naturalistic-data.org)
 
-3. Form a team, or work solo. Once you are ready, register your team/individual entry (link). Registration is free, and will open March 4th, 2022. You may enter as late as the day of submission.
+3. Form a team, or work solo. Once you are ready, register your team/individual entry. Registration is free, and will open March 4th, 2022. You may enter as late as the day of submission.
 
 4. Post questions to the [CompSAN Discourse Page](https://www.askpbs.org/c/compsan-data-competition/25).
 
@@ -34,13 +34,13 @@ Winners and prizes will be announced during the computational symposium at the 2
 6. Especially important for trainees (at all stages): complete a survey on your learning experience and the challenges you faced.
 
 ## Struggling for inspiration? Here are some possible ideas:
-*Dynamics and hidden order in naturalistic imaging data revealed using machine learning**
+### Dynamics and hidden order in naturalistic imaging data revealed using machine learning
 Affective states and associated brain activity are highly dynamic. Spatial differences in the temporal dynamics of brain responses can lead to hidden order not fully captured by standard, statically-defined networks. Machine learning approaches might provide a powerful means to discover such hidden order.
 
-*Nonlinear and/or time-warping methods for intersubject correlations*
+### Nonlinear and/or time-warping methods for intersubject correlations
 Standard methods for measuring intersubject synchrony typically rely on linear correlations in the time domain. However, individual differences in the dynamics of spontaneous activity might not be noise, and methods that can account for speed/timing differences and nonlinear relationships between subjects might reveal new information about group-level synchrony.
 
-*Encoding models of social cognition using naturalistic conditions*
+### Encoding models of social cognition using naturalistic conditions*
 Encoding models have been of great value in understanding sensory and perceptual responses to naturalistic stimuli. As the sophistication of computational models of social cognition increases, so does the potential to apply these as encoding models to understand the neural basis of social cognition.
 
 ## Questions
