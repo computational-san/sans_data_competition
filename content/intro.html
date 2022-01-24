@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CompSAN Naturalistic fMRI Data Analysis Challenge 2022 &#8212; SANS 2022 Data Competition</title>
+    <title>Overview &#8212; SANS 2022 Data Competition</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet" />
   <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -53,7 +53,7 @@
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Data" href="Download_Data.html" />
+    <link rel="next" title="Accessing Data" href="Download_Data.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -89,15 +89,32 @@
     <div class="bd-toc-item active">
         <p class="caption" role="heading">
  <span class="caption-text">
-  Resources
+  Information
  </span>
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="Download_Data.html">
-   Data
+   Accessing Data
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Registration.html">
+   Registration
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Submission.html">
+   Submission
+  </a>
+ </li>
+</ul>
+<p class="caption" role="heading">
+ <span class="caption-text">
+  Additional Resources
+ </span>
+</p>
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference external" href="https://dartbrains.org/content/Introduction_to_Programming.html">
    Introduction to Programming in Python
@@ -126,18 +143,6 @@
  <li class="toctree-l1">
   <a class="reference external" href="http://naturalistic-data.org/">
    Naturalistic Data Analysis Course
-  </a>
- </li>
-</ul>
-<p class="caption" role="heading">
- <span class="caption-text">
-  Contributing
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference external" href="https://github.com/computational-san/sans_data_competition">
-   GitHub Repository
   </a>
  </li>
 </ul>
@@ -265,32 +270,32 @@
         
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="compsan-naturalistic-fmri-data-analysis-challenge-2022">
-<h1>CompSAN Naturalistic fMRI Data Analysis Challenge 2022<a class="headerlink" href="#compsan-naturalistic-fmri-data-analysis-challenge-2022" title="Permalink to this headline">¶</a></h1>
-<p>CompSAN is very excited to announce the inaugural Naturalistic fMRI Data Analysis Challenge for SANS 2022. Naturalistic functional magnetic resonance imaging (fMRI) provides a unique opportunity to study the neural basis of social, cognitive, and affective processing. Data from naturalistic conditions are rich and dynamic, and present both an opportunity and a challenge to analysis methods.</p>
-<p>This data challenge provides the chance to demonstrate the application of new algorithms and models to naturalistic fMRI data, in order to shed new light on social and affective neural processing at the intra- and/or inter-subject level. We welcome submissions from all levels of imaging experience, from individual trainees new to naturalistic data to groups well established in this approach.</p>
+  <div class="tex2jax_ignore mathjax_ignore section" id="overview">
+<h1>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h1>
+<p>CompSAN is very excited to announce the inaugural <strong>SANS 2022 Naturalistic fMRI Data Analysis Challenge</strong>. Naturalistic functional magnetic resonance imaging (fMRI) provides a unique opportunity to study the neural basis of social, cognitive, and affective processing. Data from naturalistic conditions are rich and dynamic, and present both an opportunity and a challenge to analysis methods.</p>
+<p>This data challenge provides the chance to demonstrate the application of new algorithms and models to naturalistic fMRI data to shed new light on social and affective neural processing at the intra- and/or inter-subject level. We welcome submissions from all levels of imaging experience, from individual trainees new to naturalistic data to groups well established in this approach.</p>
 <p>The goals of the challenge include:</p>
 <ol class="simple">
 <li><p>Increasing a diversity of analysis approaches in SANS community</p></li>
 <li><p>Advancing theory development based on computational approaches</p></li>
 <li><p>Providing a forum for trainees of all levels to develop and explore new computational/analytic skills.</p></li>
 </ol>
-<p>While we are framing this challenge as a competition, we hope that this will be a fun and not-too-serious experience for everyone involved.</p>
+<p>While we are framing this challenge as a competition, we hope that this will be a positive experience for everyone involved.</p>
 <div class="section" id="judging-criteria">
 <h2>Judging Criteria<a class="headerlink" href="#judging-criteria" title="Permalink to this headline">¶</a></h2>
-<p>There is no benchmark to work towards or specific problem in the data to discover. Instead, we encourage you to be creative!</p>
+<p>There is no objective benchmark or specific problem in the data to discover. Instead, we are primarily evaluating projects on creativity and utility.</p>
 <p>Entries for the competitive portion of the challenge will be judged on:</p>
 <ol class="simple">
-<li><p>Novelty/originality of analysis approach</p></li>
-<li><p>The connection between analysis approach and social and affective neuroscience theory/topics</p></li>
-<li><p>Robustness and replicability of results.</p></li>
+<li><p>Novelty/originality of analysis approach (Has this been done before?)</p></li>
+<li><p>The connection between analysis approach and social and affective neuroscience theory/topics (What does this tell us about the brain or mind?)</p></li>
+<li><p>Robustness and replicability of results. (How robust are the results relative to the analytic choices? How much did you overfit your analysis to the dataset?)</p></li>
 </ol>
 <p>Winners and prizes will be announced during the computational symposium at the 2022 SANS conference. Entrants are also welcome to opt-out of the competition and enter just for fun/learning.</p>
 </div>
 <div class="section" id="how-to-enter-the-challenge">
 <h2>How to enter the challenge:<a class="headerlink" href="#how-to-enter-the-challenge" title="Permalink to this headline">¶</a></h2>
 <ol class="simple">
-<li><p>First, download the FridayNightLights_Study2 Dataset dataset <span class="xref std std-doc">here</span>:</p></li>
+<li><p>First, download the FridayNightLights_Study2 Dataset dataset <a class="reference internal" href="Download_Data.html"><span class="doc">here</span></a>:</p></li>
 <li><p>If you are new to naturalistic data processing, we recommend that you run through the Naturalistic Data Analysis tutorials here: https://naturalistic-data.org</p></li>
 <li><p>Form a team, or work solo. Once you are ready, register your team/individual entry (link). Registration is free, and will open March 4th, 2022. You may enter as late as the day of submission.</p></li>
 <li><p>Post questions to the <a class="reference external" href="https://www.askpbs.org/c/compsan-data-competition/25">CompSAN Discourse Page</a>.</p></li>
@@ -354,7 +359,7 @@ Encoding models have been of great value in understanding sensory and perceptual
         <a class="right-next" href="Download_Data.html" title="next page">
             <div class="prevnext-info">
                 <p class="prevnext-label">next</p>
-                <p class="prevnext-title">Data</p>
+                <p class="prevnext-title">Accessing Data</p>
             </div>
             <i class="prevnext-label fas fa-angle-right"></i>
         </a>
@@ -372,7 +377,7 @@ Encoding models have been of great value in understanding sensory and perceptual
         
             &copy; Copyright 2022.<br/>
           <div class="extra_footer">
-            This competition is supported by The Dartmouth Consortium for Interacting Minds and an NSF CAREER Award 1848370 to [Luke Chang](http://cosanlab.com).
+            This competition is supported by The Dartmouth Consortium for Interacting Minds and an NSF CAREER Award 1848370 to <a href='http://cosanlab.com'>Luke Chang</a>.
           </div>
       </p>
     </div>

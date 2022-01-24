@@ -1,0 +1,2 @@
+# Submission
+Submit a poster and extended abstract (3 pages), and notebook/matlab script (w details on associated dependencies). The abstract should include separate sections for background, methods, results and conclusions. Entrants will have the option of making their notebook/scripts publicly available. The deadline for submissions is April 2nd, 2022. At the time of submission, you will be given the opportunity to opt-out of competition.

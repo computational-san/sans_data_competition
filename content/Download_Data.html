@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Data &#8212; SANS 2022 Data Competition</title>
+    <title>Accessing Data &#8212; SANS 2022 Data Competition</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet" />
   <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -53,7 +53,8 @@
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="prev" title="CompSAN Naturalistic fMRI Data Analysis Challenge 2022" href="intro.html" />
+    <link rel="next" title="Registration" href="Registration.html" />
+    <link rel="prev" title="Overview" href="intro.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -89,15 +90,32 @@
     <div class="bd-toc-item active">
         <p class="caption" role="heading">
  <span class="caption-text">
-  Resources
+  Information
  </span>
 </p>
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   Data
+   Accessing Data
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Registration.html">
+   Registration
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Submission.html">
+   Submission
+  </a>
+ </li>
+</ul>
+<p class="caption" role="heading">
+ <span class="caption-text">
+  Additional Resources
+ </span>
+</p>
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference external" href="https://dartbrains.org/content/Introduction_to_Programming.html">
    Introduction to Programming in Python
@@ -126,18 +144,6 @@
  <li class="toctree-l1">
   <a class="reference external" href="http://naturalistic-data.org/">
    Naturalistic Data Analysis Course
-  </a>
- </li>
-</ul>
-<p class="caption" role="heading">
- <span class="caption-text">
-  Contributing
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference external" href="https://github.com/computational-san/sans_data_competition">
-   GitHub Repository
   </a>
  </li>
 </ul>
@@ -253,7 +259,7 @@
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#">
-   Data
+   Accessing Data
   </a>
  </li>
  <li class="toc-h1 nav-item toc-entry">
@@ -297,7 +303,7 @@
    </li>
    <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#datalad-has-a-python-api">
-     Datalad has a Python API!
+     Datalad has a Python API
     </a>
    </li>
   </ul>
@@ -313,18 +319,18 @@
         
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="data">
-<h1>Data<a class="headerlink" href="#data" title="Permalink to this headline">¶</a></h1>
+  <div class="tex2jax_ignore mathjax_ignore section" id="accessing-data">
+<h1>Accessing Data<a class="headerlink" href="#accessing-data" title="Permalink to this headline">¶</a></h1>
 <p>For this data competition, we will be using the Friday Night Lights dataset from:</p>
-<p>Chang, L. J., Jolly, E., Cheong, J. H., Rapuano, K. M., Greenstein, N., Chen, P. H. A., &amp; Manning, J. R. (2021). Endogenous variation in ventromedial prefrontal cortex state dynamics during naturalistic viewing reflects affective experience. <em>Science Advances, 7(17), eabf7129</em>.</p>
+<p><a class="reference external" href="https://www.science.org/doi/10.1126/sciadv.abf7129">Chang, L. J., Jolly, E., Cheong, J. H., Rapuano, K. M., Greenstein, N., Chen, P. H. A., &amp; Manning, J. R. (2021). Endogenous variation in ventromedial prefrontal cortex state dynamics during naturalistic viewing reflects affective experience. <em>Science Advances, 7(17), eabf7129</em>.</a></p>
 <p>In this dataset, participants (n=35) watched the pilot episode of the NBC television show Friday Night Lights while undergoing fMRI. We are sharing the raw data in the BIDS format. We are also sharing data that has been preprocessed using fMRIPrep version 20.2.1. See <code class="docutils literal notranslate"><span class="pre">derivatives/code/fmriprep.sh</span></code> for the script used to run preprocessing. We have also performed denoising on the preprocessed data by running a univariate GLM, which included the following regressors:</p>
 <ul class="simple">
-<li><p>Intercept, Linear &amp; Quatdratic Trends (3)</p></li>
+<li><p>Intercept, Linear &amp; Quadratic Trends (3)</p></li>
 <li><p>Expanded Realignment Parameters (24). Derivatives, quadratics, quadratic derivatives</p></li>
 <li><p>Spikes based on global outliers greater than 3 SD and also based on average frame differencing</p></li>
 <li><p>CSF regressor (1)</p></li>
 </ul>
-<p>See <code class="docutils literal notranslate"><span class="pre">derivatives/code/Denoise_Preprocessed_Data.ipynb</span></code> file for full details of the denoising model. We have included denoised data that is unsmoothed and also has been smoothed with a 6mm FWHM Gaussian kernel. We have included nifti and hdf5 versions of the data. Nifti files can be loaded using any software. HDF5 files are much faster to load if you are using our <a class="reference external" href="https://nltools.org/">nltools</a> toolbox for your data analyses. Note that subject sub-sid000496 had bad normalization using this preprocessing pipeline, so we have not included this participant in the denoised data.</p>
+<p>See <code class="docutils literal notranslate"><span class="pre">derivatives/code/Denoise_Preprocessed_Data.ipynb</span></code> file for full details of the denoising model. We have included denoised data that is unsmoothed and also has been smoothed with a 6mm FWHM Gaussian kernel. We have included nifti and hdf5 versions of the data. Nifti files can be loaded using any software. HDF5 files are much faster to load if you are using our <a class="reference external" href="https://nltools.org/">nltools</a> toolbox for your data analyses. Note that subject <code class="docutils literal notranslate"><span class="pre">sub-sid000496</span></code> had bad normalization using this preprocessing pipeline, so we have not included this participant in the denoised data.</p>
 <p>We are also sharing additional data from this paper, which may be used in projects:</p>
 <ul class="simple">
 <li><p>Study 1 (n=13) fMRI Data viewing episodes 1 &amp; 2 - Available on <a class="reference external" href="https://openneuro.org/datasets/ds003524">OpenNeuro</a>.</p></li>
@@ -335,14 +341,14 @@
 </div>
 <div class="tex2jax_ignore mathjax_ignore section" id="downloading-data">
 <h1>Downloading Data<a class="headerlink" href="#downloading-data" title="Permalink to this headline">¶</a></h1>
-<p>All of the data is being hosted by <a class="reference external" href="https://openneuro.org/datasets/ds003521">OpenNeuro</a>. The entire dataset is about 16gb and can be downloaded directly from the website and also using the AWS command line interface. See the OpenNeuro <a class="reference external" href="https://openneuro.org/datasets/ds003521/download">instructions</a> for downloading. If you have limited storage space, we recommend using Datalad to download only the files you want to work with.</p>
+<p>All of the data is being hosted by <a class="reference external" href="https://openneuro.org/datasets/ds003521">OpenNeuro</a>. The entire dataset is about 16gb and can be downloaded directly from the website and also using the AWS command line interface. See the OpenNeuro <a class="reference external" href="https://openneuro.org/datasets/ds003521/download">instructions</a> for downloading. If you have limited storage space, we recommend using Datalad to only download the files you want to work with. We have included a brief overview of working with Datalad from the command line and within Python below.</p>
 <div class="section" id="datalad">
 <h2>DataLad<a class="headerlink" href="#datalad" title="Permalink to this headline">¶</a></h2>
-<p>The easist way to access the data is using <a class="reference external" href="https://www.datalad.org/">DataLad</a>, which is an open source version control system for data built on top of <a class="reference external" href="https://git-annex.branchable.com/">git-annex</a>. Think of it like git for data. It provides a handy command line interface for downloading data, tracking changes, and sharing it with others.</p>
-<p>While DataLad offers a number of useful features for working with datasets, there are three in particular that we think make it worth the effort to install for this course.</p>
+<p>We encourage participants to download the data using <a class="reference external" href="https://www.datalad.org/">DataLad</a>, which is an open source version control system for data built on top of <a class="reference external" href="https://git-annex.branchable.com/">git-annex</a>. Think of it like git for data. It provides a handy command line interface for downloading data, tracking changes, and sharing it with others.</p>
+<p>While DataLad offers a number of useful features for working with datasets, there are three in particular that we think make it worth the effort to install for this competition.</p>
 <ol class="simple">
 <li><p>Cloning a DataLad Repository can be completed with a single line of code <code class="docutils literal notranslate"><span class="pre">datalad</span> <span class="pre">install</span> <span class="pre">&lt;repository&gt;</span></code> and provides the full directory structure in the form of symbolic links. This allows you to explore all of the files in the dataset, without having to download the entire dataset at once.</p></li>
-<li><p>Specific files can be easily downloaded using <code class="docutils literal notranslate"><span class="pre">datalad</span> <span class="pre">get</span> <span class="pre">&lt;filename&gt;</span></code>, and files can be removed from your computer at any time using <code class="docutils literal notranslate"><span class="pre">datalad</span> <span class="pre">drop</span> <span class="pre">&lt;filename&gt;</span></code>. As these datasets are large, this will allow you to only work with the data that you need for a specific tutorial and you can drop the rest when you are done with it.</p></li>
+<li><p>Specific files can be easily downloaded using <code class="docutils literal notranslate"><span class="pre">datalad</span> <span class="pre">get</span> <span class="pre">&lt;filename&gt;</span></code>, and files can be removed from your computer at any time using <code class="docutils literal notranslate"><span class="pre">datalad</span> <span class="pre">drop</span> <span class="pre">&lt;filename&gt;</span></code>. As the dataset is relatively large, this will allow you to only work with the data that you need and you can drop the rest when you are done with it.</p></li>
 <li><p>All of the DataLad commands can be run within Python using the datalad <a class="reference external" href="http://docs.datalad.org/en/latest/modref.html">python api</a>.</p></li>
 </ol>
 <p>We will only be covering a few basic DataLad functions to get and drop data. We encourage the interested reader to read the very comprehensive DataLad <a class="reference external" href="http://handbook.datalad.org/en/latest/">User Handbook</a> for more details and troubleshooting.</p>
@@ -410,33 +416,21 @@ Requirement already satisfied: requests-toolbelt&gt;=0.9.1 in /Users/lukechang/o
 <p>You can run this from the notebook using the <code class="docutils literal notranslate"><span class="pre">!</span></code> cell magic.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>mkdir ~/Downloads/FridayNightLights 
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
 
-<span class="o">!</span><span class="nb">cd</span> ~/Downloads/FridayNightLights
+<span class="n">download_path</span> <span class="o">=</span> <span class="s1">&#39;/Users/lukechang/Downloads/FridayNightLights&#39;</span>
+
+<span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">download_path</span><span class="p">):</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="n">download_path</span><span class="p">)</span>
+
+<span class="o">%</span><span class="k">cd</span> {download_path}
 
 <span class="o">!</span>datalad install https://github.com/OpenNeuroDatasets/ds003521.git
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>mkdir: /Users/lukechang/Downloads/FridayNightLights: File exists
-Clone attempt:   0%|              | 0.00/2.00 [00:00&lt;?, ? Candidate locations/s]
-Enumerating: 0.00 Objects [00:00, ? Objects/s]
-                                              
-Counting:   0%|                              | 0.00/13.0k [00:00&lt;?, ? Objects/s]
-                                                                                
-Compressing:   0%|                           | 0.00/10.1k [00:00&lt;?, ? Objects/s]
-                                                                                
-Receiving:   0%|                             | 0.00/13.0k [00:00&lt;?, ? Objects/s]
-Receiving:  31%|██████▏             | 4.02k/13.0k [00:00&lt;00:00, 39.8k Objects/s]
-Receiving:  88%|█████████████████▌  | 11.4k/13.0k [00:00&lt;00:00, 26.4k Objects/s]
-                                                                                
-Resolving:   0%|                                | 0.00/517 [00:00&lt;?, ? Deltas/s]
-[INFO   ] Remote origin not usable by git-annex; setting annex-ignore 
-[INFO   ] https://github.com/OpenNeuroDatasets/ds003521.git/config download failed: Not Found 
-[INFO   ] access to 1 dataset sibling s3-PRIVATE not auto-enabled, enable with:
-| 		datalad siblings -d &quot;/Users/lukechang/Downloads/FridayNightLights/ds003521/ds003521&quot; enable -s s3-PRIVATE 
-install(ok): /Users/lukechang/Downloads/FridayNightLights/ds003521/ds003521 (dataset)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/Users/lukechang/Downloads/FridayNightLights
 </pre></div>
 </div>
 </div>
@@ -445,7 +439,7 @@ install(ok): /Users/lukechang/Downloads/FridayNightLights/ds003521/ds003521 (dat
 </div>
 <div class="section" id="datalad-basics">
 <h2>Datalad Basics<a class="headerlink" href="#datalad-basics" title="Permalink to this headline">¶</a></h2>
-<p>You might be surprised to find that after cloning the dataset that it barely takes up any space <code class="docutils literal notranslate"><span class="pre">du</span> <span class="pre">-sh</span></code>. This is because cloning only downloads the metadata of the dataset to see what files are included.</p>
+<p>You might be surprised to find that after cloning the dataset that it barely takes up any space using <code class="docutils literal notranslate"><span class="pre">du</span> <span class="pre">-sh</span></code>. This is because cloning only downloads the metadata of the dataset to see what files are included.</p>
 <p>You can check to see how big the entire dataset would be if you downloaded everything using <code class="docutils literal notranslate"><span class="pre">datalad</span> <span class="pre">status</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -457,8 +451,8 @@ install(ok): /Users/lukechang/Downloads/FridayNightLights/ds003521/ds003521 (dat
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/Users/lukechang/Downloads/FridayNightLights/ds003521
+untracked: ds003521 (directory)
 70 annex&#39;d files (9.7 GB recorded total size)
-nothing to save, working tree clean
 </pre></div>
 </div>
 </div>
@@ -510,7 +504,7 @@ nothing to save, working tree clean
 </div>
 </div>
 <div class="section" id="datalad-has-a-python-api">
-<h2>Datalad has a Python API!<a class="headerlink" href="#datalad-has-a-python-api" title="Permalink to this headline">¶</a></h2>
+<h2>Datalad has a Python API<a class="headerlink" href="#datalad-has-a-python-api" title="Permalink to this headline">¶</a></h2>
 <p>One particularly nice aspect of datalad is that it has a Python API, which means that anything you would like to do with datalad in the commandline, can also be run in Python. See the details of the datalad <a class="reference external" href="http://docs.datalad.org/en/latest/modref.html">Python API</a>.</p>
 <p>For example, suppose you would like to clone a data repository, such as the Localizer dataset. You can run <code class="docutils literal notranslate"><span class="pre">dl.clone(source=url,</span> <span class="pre">path=location)</span></code>. Make sure you set <code class="docutils literal notranslate"><span class="pre">localizer_path</span></code> to the location where you would like the Localizer repository installed.</p>
 <div class="cell docutils container">
@@ -520,7 +514,7 @@ nothing to save, working tree clean
 <span class="kn">import</span> <span class="nn">datalad.api</span> <span class="k">as</span> <span class="nn">dl</span>
 <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 
-<span class="n">localizer_path</span> <span class="o">=</span> <span class="s1">&#39;~/Downloads/FridayNightLights&#39;</span>
+<span class="n">download_path</span> <span class="o">=</span> <span class="s1">&#39;/Users/lukechang/Downloads/FridayNightLights&#39;</span>
 
 <span class="n">dl</span><span class="o">.</span><span class="n">clone</span><span class="p">(</span><span class="n">source</span><span class="o">=</span><span class="s1">&#39;https://github.com/OpenNeuroDatasets/ds003521.git&#39;</span><span class="p">,</span> <span class="n">path</span><span class="o">=</span><span class="n">localizer_path</span><span class="p">)</span>
 </pre></div>
@@ -529,7 +523,7 @@ nothing to save, working tree clean
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">RuntimeError</span><span class="g g-Whitespace">                              </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="n">lt</span><span class="o">/</span><span class="mi">52_7</span><span class="n">v4r10qg8m6_2fjzqh1z80000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_78597</span><span class="o">/</span><span class="mf">542021800.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="n">lt</span><span class="o">/</span><span class="mi">52_7</span><span class="n">v4r10qg8m6_2fjzqh1z80000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_78597</span><span class="o">/</span><span class="mf">482638609.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="kn">import</span> <span class="nn">os</span>
 <span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">import</span> <span class="nn">glob</span>
 <span class="ne">----&gt; </span><span class="mi">3</span> <span class="kn">import</span> <span class="nn">datalad.api</span> <span class="k">as</span> <span class="nn">dl</span>
@@ -600,7 +594,7 @@ nothing to save, working tree clean
 <p>We can now create a dataset instance using <code class="docutils literal notranslate"><span class="pre">dl.Dataset(path_to_data)</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ds</span> <span class="o">=</span> <span class="n">dl</span><span class="o">.</span><span class="n">Dataset</span><span class="p">(</span><span class="n">localizer_path</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ds</span> <span class="o">=</span> <span class="n">dl</span><span class="o">.</span><span class="n">Dataset</span><span class="p">(</span><span class="n">download_path</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -624,7 +618,7 @@ nothing to save, working tree clean
 <p>Let’s use <code class="docutils literal notranslate"><span class="pre">glob</span></code> to find all of the tab-delimited confound data generated by fmriprep.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">file_list</span> <span class="o">=</span> <span class="n">glob</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">localizer_path</span><span class="p">,</span> <span class="s1">&#39;*&#39;</span><span class="p">,</span> <span class="s1">&#39;fmriprep&#39;</span><span class="p">,</span> <span class="s1">&#39;*&#39;</span><span class="p">,</span> <span class="s1">&#39;func&#39;</span><span class="p">,</span> <span class="s1">&#39;*tsv&#39;</span><span class="p">))</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">file_list</span> <span class="o">=</span> <span class="n">glob</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">download_path</span><span class="p">,</span> <span class="s1">&#39;derivatives&#39;</span><span class="p">,</span> <span class="s1">&#39;fmriprep&#39;</span><span class="p">,</span> <span class="s1">&#39;*&#39;</span><span class="p">,</span> <span class="s1">&#39;func&#39;</span><span class="p">,</span> <span class="s1">&#39;*tsv&#39;</span><span class="p">))</span>
 <span class="n">file_list</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
 <span class="n">file_list</span><span class="p">[:</span><span class="mi">10</span><span class="p">]</span>
 </pre></div>
@@ -845,7 +839,7 @@ nothing to save, working tree clean
 <p>Let’s actually download one of the files we will be using in the tutorial. First, let’s use glob to get a list of all of the functional data that has been preprocessed by fmriprep, denoised, and smoothed.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">file_list</span> <span class="o">=</span> <span class="n">glob</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">localizer_path</span><span class="p">,</span> <span class="s1">&#39;derivatives&#39;</span><span class="p">,</span> <span class="s1">&#39;smoothed&#39;</span><span class="p">,</span> <span class="s1">&#39;*_task-movie_run-1_space-MNI152NLin2009cAsym_desc-preproc_trim_smooth6_denoised_bold.hdf5&#39;</span><span class="p">))</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">file_list</span> <span class="o">=</span> <span class="n">glob</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">download_path</span><span class="p">,</span> <span class="s1">&#39;derivatives&#39;</span><span class="p">,</span> <span class="s1">&#39;smoothed&#39;</span><span class="p">,</span> <span class="s1">&#39;*_task-movie_run-1_space-MNI152NLin2009cAsym_desc-preproc_trim_smooth6_denoised_bold.hdf5&#39;</span><span class="p">))</span>
 <span class="n">file_list</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
 <span class="n">file_list</span>
 </pre></div>
@@ -927,10 +921,19 @@ nothing to save, working tree clean
             <i class="prevnext-label fas fa-angle-left"></i>
             <div class="prevnext-info">
                 <p class="prevnext-label">previous</p>
-                <p class="prevnext-title">CompSAN Naturalistic fMRI Data Analysis Challenge 2022</p>
+                <p class="prevnext-title">Overview</p>
             </div>
         </a>
     </div>
+     <div id="next">
+        <a class="right-next" href="Registration.html" title="next page">
+            <div class="prevnext-info">
+                <p class="prevnext-label">next</p>
+                <p class="prevnext-title">Registration</p>
+            </div>
+            <i class="prevnext-label fas fa-angle-right"></i>
+        </a>
+     </div>
 
 </div>
         
@@ -944,7 +947,7 @@ nothing to save, working tree clean
         
             &copy; Copyright 2022.<br/>
           <div class="extra_footer">
-            This competition is supported by The Dartmouth Consortium for Interacting Minds and an NSF CAREER Award 1848370 to [Luke Chang](http://cosanlab.com).
+            This competition is supported by The Dartmouth Consortium for Interacting Minds and an NSF CAREER Award 1848370 to <a href='http://cosanlab.com'>Luke Chang</a>.
           </div>
       </p>
     </div>
