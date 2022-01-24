@@ -40,7 +40,7 @@ Affective states and associated brain activity are highly dynamic. Spatial diffe
 ### Nonlinear and/or time-warping methods for intersubject correlations
 Standard methods for measuring intersubject synchrony typically rely on linear correlations in the time domain. However, individual differences in the dynamics of spontaneous activity might not be noise, and methods that can account for speed/timing differences and nonlinear relationships between subjects might reveal new information about group-level synchrony.
 
-### Encoding models of social cognition using naturalistic conditions*
+### Encoding models of social cognition using naturalistic conditions
 Encoding models have been of great value in understanding sensory and perceptual responses to naturalistic stimuli. As the sophistication of computational models of social cognition increases, so does the potential to apply these as encoding models to understand the neural basis of social cognition.
 
 ## Questions
