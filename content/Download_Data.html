@@ -341,7 +341,7 @@
 </div>
 <div class="tex2jax_ignore mathjax_ignore section" id="downloading-data">
 <h1>Downloading Data<a class="headerlink" href="#downloading-data" title="Permalink to this headline">¶</a></h1>
-<p>All of the data is being hosted by <a class="reference external" href="https://openneuro.org/datasets/ds003521">OpenNeuro</a>. The entire dataset is about 16gb and can be downloaded directly from the website and also using the AWS command line interface. See the OpenNeuro <a class="reference external" href="https://openneuro.org/datasets/ds003521/download">instructions</a> for downloading. If you have limited storage space, we recommend using Datalad to only download the files you want to work with. We have included a brief overview of working with Datalad from the command line and within Python below.</p>
+<p>All of the data is being hosted by <a class="reference external" href="https://openneuro.org/datasets/ds003521">OpenNeuro</a>. The entire dataset is about 202gb and can be downloaded directly from the website and also using the AWS command line interface. See the OpenNeuro <a class="reference external" href="https://openneuro.org/datasets/ds003521/download">instructions</a> for downloading. However, as most people have limited storage space, we recommend using Datalad to only download the files you want to work with. We have included a brief overview of working with Datalad from the command line and within Python below.</p>
 <div class="section" id="datalad">
 <h2>DataLad<a class="headerlink" href="#datalad" title="Permalink to this headline">¶</a></h2>
 <p>We encourage participants to download the data using <a class="reference external" href="https://www.datalad.org/">DataLad</a>, which is an open source version control system for data built on top of <a class="reference external" href="https://git-annex.branchable.com/">git-annex</a>. Think of it like git for data. It provides a handy command line interface for downloading data, tracking changes, and sharing it with others.</p>
@@ -412,7 +412,7 @@ Requirement already satisfied: requests-toolbelt&gt;=0.9.1 in /Users/lukechang/o
 </div>
 <div class="section" id="download-data-with-datalad">
 <h3>Download Data with DataLad<a class="headerlink" href="#download-data-with-datalad" title="Permalink to this headline">¶</a></h3>
-<p>The FNL dataset can be accessed at the following location https://openneuro.org/datasets/ds003521. To download the dataset run <code class="docutils literal notranslate"><span class="pre">datalad</span> <span class="pre">install</span> <span class="pre">https://github.com/OpenNeuroDatasets/ds003521.git</span></code> in a terminal in the location where you would like to install the dataset. Don’t forget to change the directory to a folder on your local computer. The full dataset is approximately 16gb.</p>
+<p>The FNL dataset can be accessed at the following location https://openneuro.org/datasets/ds003521. To download the dataset run <code class="docutils literal notranslate"><span class="pre">datalad</span> <span class="pre">install</span> <span class="pre">https://github.com/OpenNeuroDatasets/ds003521.git</span></code> in a terminal in the location where you would like to install the dataset. Don’t forget to change the directory to a folder on your local computer. The full dataset is approximately 202gb.</p>
 <p>You can run this from the notebook using the <code class="docutils literal notranslate"><span class="pre">!</span></code> cell magic.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -431,6 +431,26 @@ Requirement already satisfied: requests-toolbelt&gt;=0.9.1 in /Users/lukechang/o
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/Users/lukechang/Downloads/FridayNightLights
+Clone attempt:   0%|              | 0.00/2.00 [00:00&lt;?, ? Candidate locations/s]
+Enumerating: 0.00 Objects [00:00, ? Objects/s]
+                                              
+Counting:   0%|                              | 0.00/13.0k [00:00&lt;?, ? Objects/s]
+                                                                                
+Compressing:   0%|                           | 0.00/10.1k [00:00&lt;?, ? Objects/s]
+                                                                                
+Receiving:   0%|                             | 0.00/13.0k [00:00&lt;?, ? Objects/s]
+Receiving:  47%|█████████▍          | 6.11k/13.0k [00:00&lt;00:00, 60.7k Objects/s]
+Receiving:  93%|██████████████████▋ | 12.1k/13.0k [00:19&lt;00:00, 60.7k Objects/s]
+Receiving:  93%|████████████████████▌ | 12.1k/13.0k [00:19&lt;00:01, 531 Objects/s]
+Receiving:  94%|████████████████████▌ | 12.2k/13.0k [00:23&lt;00:01, 411 Objects/s]
+                                                                                
+Resolving:   0%|                                | 0.00/522 [00:00&lt;?, ? Deltas/s]
+[INFO   ] scanning for annexed files (this may take some time) 
+[INFO   ] Remote origin not usable by git-annex; setting annex-ignore 
+[INFO   ] https://github.com/OpenNeuroDatasets/ds003521.git/config download failed: Not Found 
+[INFO   ] access to 1 dataset sibling s3-PRIVATE not auto-enabled, enable with:
+| 		datalad siblings -d &quot;/Users/lukechang/Downloads/FridayNightLights/ds003521&quot; enable -s s3-PRIVATE 
+install(ok): /Users/lukechang/Downloads/FridayNightLights/ds003521 (dataset)
 </pre></div>
 </div>
 </div>
@@ -451,8 +471,8 @@ Requirement already satisfied: requests-toolbelt&gt;=0.9.1 in /Users/lukechang/o
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/Users/lukechang/Downloads/FridayNightLights/ds003521
-untracked: ds003521 (directory)
-70 annex&#39;d files (9.7 GB recorded total size)
+1368 annex&#39;d files (202.6 GB recorded total size)
+nothing to save, working tree clean
 </pre></div>
 </div>
 </div>
@@ -476,8 +496,8 @@ untracked: ds003521 (directory)
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>untracked: ds003521 (directory)
-70 annex&#39;d files (0.0 B/9.7 GB present/total size)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1368 annex&#39;d files (0.0 B/202.6 GB present/total size)
+nothing to save, working tree clean
 </pre></div>
 </div>
 </div>
@@ -507,6 +527,7 @@ untracked: ds003521 (directory)
 <h2>Datalad has a Python API<a class="headerlink" href="#datalad-has-a-python-api" title="Permalink to this headline">¶</a></h2>
 <p>One particularly nice aspect of datalad is that it has a Python API, which means that anything you would like to do with datalad in the commandline, can also be run in Python. See the details of the datalad <a class="reference external" href="http://docs.datalad.org/en/latest/modref.html">Python API</a>.</p>
 <p>For example, suppose you would like to clone a data repository, such as the Localizer dataset. You can run <code class="docutils literal notranslate"><span class="pre">dl.clone(source=url,</span> <span class="pre">path=location)</span></code>. Make sure you set <code class="docutils literal notranslate"><span class="pre">localizer_path</span></code> to the location where you would like the Localizer repository installed.</p>
+<p>Also, note that we have been personally running into issues with specific versions of Python and Macs, that will hopefully be resolved soon as the developers fix this.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
@@ -523,7 +544,7 @@ untracked: ds003521 (directory)
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">RuntimeError</span><span class="g g-Whitespace">                              </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="n">lt</span><span class="o">/</span><span class="mi">52_7</span><span class="n">v4r10qg8m6_2fjzqh1z80000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_78597</span><span class="o">/</span><span class="mf">482638609.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="n">lt</span><span class="o">/</span><span class="mi">52_7</span><span class="n">v4r10qg8m6_2fjzqh1z80000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_78597</span><span class="o">/</span><span class="mf">588604808.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="kn">import</span> <span class="nn">os</span>
 <span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">import</span> <span class="nn">glob</span>
 <span class="ne">----&gt; </span><span class="mi">3</span> <span class="kn">import</span> <span class="nn">datalad.api</span> <span class="k">as</span> <span class="nn">dl</span>
@@ -598,6 +619,16 @@ untracked: ds003521 (directory)
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="n">lt</span><span class="o">/</span><span class="mi">52_7</span><span class="n">v4r10qg8m6_2fjzqh1z80000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_78597</span><span class="o">/</span><span class="mf">473600268.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">ds</span> <span class="o">=</span> <span class="n">dl</span><span class="o">.</span><span class="n">Dataset</span><span class="p">(</span><span class="n">download_path</span><span class="p">)</span>
+
+<span class="ne">NameError</span>: name &#39;dl&#39; is not defined
+</pre></div>
+</div>
+</div>
 </div>
 <p>How much of the dataset have we downloaded?  We can check the status of the annex using <code class="docutils literal notranslate"><span class="pre">ds.status(annex='all')</span></code>.</p>
 <div class="cell docutils container">
@@ -607,8 +638,12 @@ untracked: ds003521 (directory)
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1794 annex&#39;d files (0.0 B/42.1 GB present/total size)
-1794 annex&#39;d files (0.0 B/42.1 GB present/total size)
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="n">lt</span><span class="o">/</span><span class="mi">52_7</span><span class="n">v4r10qg8m6_2fjzqh1z80000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_78597</span><span class="o">/</span><span class="mf">3006928318.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">results</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">status</span><span class="p">(</span><span class="n">annex</span><span class="o">=</span><span class="s1">&#39;all&#39;</span><span class="p">)</span>
+
+<span class="ne">NameError</span>: name &#39;ds&#39; is not defined
 </pre></div>
 </div>
 </div>
@@ -625,16 +660,12 @@ untracked: ds003521 (directory)
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;/Users/lukechang/Dropbox/Dartbrains/data/Localizer/derivatives/fmriprep/sub-S01/func/sub-S01_task-localizer_desc-confounds_regressors.tsv&#39;,
- &#39;/Users/lukechang/Dropbox/Dartbrains/data/Localizer/derivatives/fmriprep/sub-S02/func/sub-S02_task-localizer_desc-confounds_regressors.tsv&#39;,
- &#39;/Users/lukechang/Dropbox/Dartbrains/data/Localizer/derivatives/fmriprep/sub-S03/func/sub-S03_task-localizer_desc-confounds_regressors.tsv&#39;,
- &#39;/Users/lukechang/Dropbox/Dartbrains/data/Localizer/derivatives/fmriprep/sub-S04/func/sub-S04_task-localizer_desc-confounds_regressors.tsv&#39;,
- &#39;/Users/lukechang/Dropbox/Dartbrains/data/Localizer/derivatives/fmriprep/sub-S05/func/sub-S05_task-localizer_desc-confounds_regressors.tsv&#39;,
- &#39;/Users/lukechang/Dropbox/Dartbrains/data/Localizer/derivatives/fmriprep/sub-S06/func/sub-S06_task-localizer_desc-confounds_regressors.tsv&#39;,
- &#39;/Users/lukechang/Dropbox/Dartbrains/data/Localizer/derivatives/fmriprep/sub-S07/func/sub-S07_task-localizer_desc-confounds_regressors.tsv&#39;,
- &#39;/Users/lukechang/Dropbox/Dartbrains/data/Localizer/derivatives/fmriprep/sub-S08/func/sub-S08_task-localizer_desc-confounds_regressors.tsv&#39;,
- &#39;/Users/lukechang/Dropbox/Dartbrains/data/Localizer/derivatives/fmriprep/sub-S09/func/sub-S09_task-localizer_desc-confounds_regressors.tsv&#39;,
- &#39;/Users/lukechang/Dropbox/Dartbrains/data/Localizer/derivatives/fmriprep/sub-S10/func/sub-S10_task-localizer_desc-confounds_regressors.tsv&#39;]
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/Users/lukechang/opt/anaconda3/lib/python3.8/site-packages/traitlets/config/loader.py:244: RuntimeWarning: coroutine &#39;run_async_cmd&#39; was never awaited
+  for key in self:
+RuntimeWarning: Enable tracemalloc to get the object allocation traceback
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[]
 </pre></div>
 </div>
 </div>
