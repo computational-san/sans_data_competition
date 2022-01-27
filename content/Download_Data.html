@@ -891,60 +891,10 @@ nothing to save, working tree clean
 </div>
 </div>
 </div>
-<p>Now let’s download the first subject’s file using <code class="docutils literal notranslate"><span class="pre">ds.get()</span></code>. This file is 825mb, so this might take a few minutes depending on your internet speed.</p>
+<p>Now let’s download the first subject’s file using <code class="docutils literal notranslate"><span class="pre">ds.get()</span></code>. This file is 1.2gb, so this might take a few minutes depending on your internet speed.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">result</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">file_list</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">IncompleteResultsError</span><span class="g g-Whitespace">                    </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="n">lt</span><span class="o">/</span><span class="mi">52_7</span><span class="n">v4r10qg8m6_2fjzqh1z80000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_613</span><span class="o">/</span><span class="mf">4243294396.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">result</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">file_list</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
-
-<span class="nn">~/opt/anaconda3/lib/python3.8/site-packages/datalad/distribution/dataset.py</span> in <span class="ni">apply_func</span><span class="nt">(wrapped, instance, args, kwargs)</span>
-<span class="g g-Whitespace">    </span><span class="mi">482</span>             <span class="k">elif</span> <span class="n">i</span> <span class="o">&gt;=</span> <span class="n">ds_index</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">483</span>                 <span class="n">kwargs</span><span class="p">[</span><span class="n">orig_pos</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">]]</span> <span class="o">=</span> <span class="n">args</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
-<span class="ne">--&gt; </span><span class="mi">484</span>         <span class="k">return</span> <span class="n">f</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">485</span> 
-<span class="g g-Whitespace">    </span><span class="mi">486</span>     <span class="nb">setattr</span><span class="p">(</span><span class="n">Dataset</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">apply_func</span><span class="p">(</span><span class="n">f</span><span class="p">))</span>
-
-<span class="nn">~/opt/anaconda3/lib/python3.8/site-packages/datalad/interface/utils.py</span> in <span class="ni">eval_func</span><span class="nt">(wrapped, instance, args, kwargs)</span>
-<span class="g g-Whitespace">    </span><span class="mi">482</span> 
-<span class="g g-Whitespace">    </span><span class="mi">483</span>             <span class="n">lgr</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="s2">&quot;Returning return_func from eval_func for </span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">wrapped_class</span><span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">484</span>             <span class="k">return</span> <span class="n">return_func</span><span class="p">(</span><span class="n">generator_func</span><span class="p">)(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">485</span> 
-<span class="g g-Whitespace">    </span><span class="mi">486</span>     <span class="n">ret</span> <span class="o">=</span> <span class="n">eval_func</span><span class="p">(</span><span class="n">func</span><span class="p">)</span>
-
-<span class="nn">~/opt/anaconda3/lib/python3.8/site-packages/datalad/interface/utils.py</span> in <span class="ni">return_func</span><span class="nt">(wrapped_, instance_, args_, kwargs_)</span>
-<span class="g g-Whitespace">    </span><span class="mi">474</span>                     <span class="c1"># unwind generator if there is one, this actually runs</span>
-<span class="g g-Whitespace">    </span><span class="mi">475</span>                     <span class="c1"># any processing</span>
-<span class="ne">--&gt; </span><span class="mi">476</span>                     <span class="n">results</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">results</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">477</span>                 <span class="k">if</span> <span class="n">return_type</span> <span class="o">==</span> <span class="s1">&#39;item-or-list&#39;</span> <span class="ow">and</span> \
-<span class="g g-Whitespace">    </span><span class="mi">478</span>                         <span class="nb">len</span><span class="p">(</span><span class="n">results</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="p">:</span>
-
-<span class="nn">~/opt/anaconda3/lib/python3.8/site-packages/datalad/interface/utils.py</span> in <span class="ni">generator_func</span><span class="nt">(*_args, **_kwargs)</span>
-<span class="g g-Whitespace">    </span><span class="mi">459</span> 
-<span class="g g-Whitespace">    </span><span class="mi">460</span>             <span class="k">if</span> <span class="n">incomplete_results</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">461</span>                 <span class="k">raise</span> <span class="n">IncompleteResultsError</span><span class="p">(</span>
-<span class="g g-Whitespace">    </span><span class="mi">462</span>                     <span class="n">failed</span><span class="o">=</span><span class="n">incomplete_results</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">463</span>                     <span class="n">msg</span><span class="o">=</span><span class="s2">&quot;Command did not complete successfully&quot;</span><span class="p">)</span>
-
-<span class="ne">IncompleteResultsError</span>: Command did not complete successfully. 1 failed:
-<span class="p">[{</span><span class="s1">&#39;action&#39;</span><span class="p">:</span> <span class="s1">&#39;get&#39;</span><span class="p">,</span>
-  <span class="s1">&#39;annexkey&#39;</span><span class="p">:</span> <span class="s1">&#39;MD5E-s1260187407--696e2e23879c4093d30cf3776f614bc0.nii.gz&#39;</span><span class="p">,</span>
-  <span class="s1">&#39;error_message&#39;</span><span class="p">:</span> <span class="s1">&#39;download failed: Forbidden</span><span class="se">\n</span><span class="s1">&#39;</span>
-                   <span class="s1">&#39;download failed: Forbidden</span><span class="se">\n</span><span class="s1">&#39;</span>
-                   <span class="s1">&#39;download failed: Forbidden</span><span class="se">\n</span><span class="s1">&#39;</span>
-                   <span class="s1">&#39;download failed: Forbidden</span><span class="se">\n</span><span class="s1">&#39;</span>
-                   <span class="s1">&#39;download failed: Forbidden</span><span class="se">\n</span><span class="s1">&#39;</span>
-                   <span class="s1">&#39;download failed: Forbidden&#39;</span><span class="p">,</span>
-  <span class="s1">&#39;path&#39;</span><span class="p">:</span> <span class="s1">&#39;/Users/lukechang/Downloads/FridayNightLights/derivatives/denoised/smoothed/sub-sid000216_task-movie_run-1_space-MNI152NLin2009cAsym_desc-preproc_trim_smooth6_denoised_bold.nii.gz&#39;</span><span class="p">,</span>
-  <span class="s1">&#39;refds&#39;</span><span class="p">:</span> <span class="s1">&#39;/Users/lukechang/Downloads/FridayNightLights&#39;</span><span class="p">,</span>
-  <span class="s1">&#39;status&#39;</span><span class="p">:</span> <span class="s1">&#39;error&#39;</span><span class="p">,</span>
-  <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;file&#39;</span><span class="p">}]</span>
 </pre></div>
 </div>
 </div>
