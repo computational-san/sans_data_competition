@@ -27,11 +27,13 @@ Winners and prizes will be announced during the computational symposium at the 2
 
 3. Form a team, or work solo. Once you are ready, register your team/individual entry. Registration is free, and will open March 4th, 2022. You may enter as late as the day of submission.
 
-4. Post questions to the [CompSAN Discourse Page](https://www.askpbs.org/c/compsan-data-competition/25).
+4. To be a participant in the competition, at least one member of your team will need to register for the main [SANS 2022 Conference](https://socialaffectiveneuro.org/conference/#registration). In addition, you will need to register for the main conference to attend the computational symposium where winners, prizes, and more will be announced.
 
-5. Submit a poster and extended abstract (3 pages), and notebook/matlab script (w details on associated dependencies). The abstract should include separate sections for background, methods, results and conclusions. Entrants will have the option of making their notebook/scripts publicly available. The deadline for submissions is April 2nd, 2022. At the time of submission, you will be given the opportunity to opt-out of competition.
+5. Post questions to the [CompSAN Discourse Page](https://www.askpbs.org/c/compsan-data-competition/25).
 
-6. Especially important for trainees (at all stages): complete a survey on your learning experience and the challenges you faced.
+6. Submit a poster and extended abstract (3 pages), and notebook/matlab script (w details on associated dependencies). The abstract should include separate sections for background, methods, results and conclusions. Entrants will have the option of making their notebook/scripts publicly available. The deadline for submissions is April 2nd, 2022. At the time of submission, you will be given the opportunity to opt-out of competition.
+
+7. Especially important for trainees (at all stages): complete a survey on your learning experience and the challenges you faced.
 
 ## Struggling for inspiration? Here are some possible ideas:
 One exciting aspect of this challenge is that there are really an infinite number of possible things to try, which unfortunately can make it overwhelming to figure out where to begin. For inspiration for how different methods have been used to study naturalistic data more broadly, check out the [Naturalistic Data Analysis Tutorials](https://naturalistic-data.org/). You might be able to apply or modify one of those methods to ask a new question for social and affective neuroscience. Alternatively, you might think of a new questions and then try to create a new analysis method to answer your question.
