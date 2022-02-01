@@ -241,9 +241,9 @@ file_list.sort()
 file_list
 
 
-# Now let's download the first subject's file using `ds.get()`. This file is 825mb, so this might take a few minutes depending on your internet speed.
+# Now let's download the first subject's file using `ds.get()`. This file is 1.2gb, so this might take a few minutes depending on your internet speed.
 
-# In[18]:
+# In[ ]:
 
 
 result = ds.get(file_list[0])
@@ -255,10 +255,4 @@ result = ds.get(file_list[0])
 
 
 result = ds.status(annex='all')
-
-
-# In[ ]:
-
-
-
 
