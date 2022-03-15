@@ -25,7 +25,7 @@ Winners and prizes will be announced during the computational symposium at the 2
 
 2. If you are new to naturalistic data processing, we encourage you to try applying methods described in the [Naturalistic Data Analysis tutorials](https://naturalistic-data.org)
 
-3. Form a team, or work solo. Once you are ready, register your team/individual entry. Registration is free, and will open March 4th, 2022. You may enter as late as the day of submission.
+3. Form a team, or work solo. Once you are ready, register your team/individual entry. Registration is free, and is now open. You may enter as late as the day of submission.
 
 4. To be a participant in the competition, at least one member of your team will need to register for the main [SANS 2022 Conference](https://socialaffectiveneuro.org/conference/#registration). In addition, you will need to register for the main conference to attend the computational symposium where winners, prizes, and more will be announced.
 
