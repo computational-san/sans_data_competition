@@ -24,13 +24,12 @@ To update the book, you will need to build it locally using [jupyter-book build]
 
 2. **Build website locally**. The new version of jupyter-book will run the notebooks to generate the figures by default. I find it helpful to keep 1-2 subjects in `~/Github/dartbrains/data/localizer`, which is in .gitignore so it will not get pushed to github.
 
-`jupyter-book build dartbrains`
+`jupyter-book build sans_data_competition`
 
 3. **Push updated book to github**. This will sync the updated book to gh-pages branch of our github repository. Don't forget to submit a pull request or push the code to the master repository as well.
 
-`ghp-import -n -p -f -c dartbrains.org _build/html`
+`ghp-import -n -p -f _build/html`
 
-4. **Add domain name to settings**. Everytime we update the website, we need to tell github that we are using a custom domain name. This is annoying and should be an easy fix. I think it just has something to do with properly specifying the URL in the CNAME file. Until this is fixed, after syncing gh-pages branch, you will need to go into settings and add `dartbrains.org` as URL name.
 
 # License for this book
 
