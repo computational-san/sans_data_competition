@@ -63,3 +63,5 @@ Please post any questions that arise on our [Discourse Page](https://www.askpbs.
 
 ## Acknowledgements
 This competition is organized by James Thompson, Mark Thornton, and Luke Chang and is supported by The Dartmouth Consortium for Interacting Minds and an NSF CAREER Award 1848370 to [Luke Chang](http://cosanlab.com).
+![cim_logo](../images/logo/cim_logo.svg)
+
