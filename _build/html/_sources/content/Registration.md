@@ -1,4 +1,4 @@
 # Registration
-Each project will need to register to ensure that can be officially part of the competition. Registration is free, and will open March 4th, 2022. You may enter as late as the day of submission. 
+Registration for the data challenge is now open! You can register [here](https://form.jotform.com/220664461379158). Pick one member of your team to be the point of contact and register. Registration is free, and you may enter as late as the day of submission. 
 
-Stay tuned, we will update this page with registration details soon.
+A portal for submission of entries will be made available starting March 24th until April 4th.

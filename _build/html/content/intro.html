@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Overview &#8212; SANS 2022 Data Competition</title>
     
-  <link href="../_static/css/theme.css" rel="stylesheet" />
-  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -23,7 +23,7 @@
 
     
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.e2363ea40746bee74734a24ffefccd78.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -31,32 +31,47 @@
     <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
 
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
     <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script>
-        const thebe_selector = ".thebe"
-        const thebe_selector_input = "pre"
-        const thebe_selector_output = ".output"
-    </script>
+    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Accessing Data" href="Download_Data.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="en" />
+    <meta name="docsearch:language" content="None">
     
+
+    <!-- Google Analytics -->
+    
+<script async="" src="https://www.google-analytics.com/analytics.js"></script>
+<script>
+                        window.ga = window.ga || function () {
+                            (ga.q = ga.q || []).push(arguments) };
+                        ga.l = +new Date;
+                        ga('create', 'UA-138270939-1', 'auto');
+                        ga('set', 'anonymizeIp', true);
+                        ga('send', 'pageview');
+                    </script>
+
   </head>
   <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
     
@@ -87,7 +102,7 @@
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
-        <p class="caption" role="heading">
+        <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Information
  </span>
@@ -109,7 +124,7 @@
   </a>
  </li>
 </ul>
-<p class="caption" role="heading">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Additional Resources
  </span>
@@ -191,7 +206,7 @@
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
     </div>
 </div>
 
@@ -227,7 +242,7 @@
         </div>
 
         <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show">
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
             
             <div class="tocsection onthispage pt-5 pb-3">
                 <i class="fas fa-list"></i> Contents
@@ -284,7 +299,67 @@
 </div>
     <div id="main-content" class="row">
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-        
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Overview</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#judging-criteria">
+   Judging Criteria
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#how-to-enter-the-challenge">
+   How to enter the challenge:
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#struggling-for-inspiration-here-are-some-possible-ideas">
+   Struggling for inspiration? Here are some possible ideas:
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#encoding-models-of-social-cognition-using-naturalistic-conditions">
+     Encoding models of social cognition using naturalistic conditions
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#dynamics-and-latent-states-in-naturalistic-imaging-data">
+     Dynamics and latent states in naturalistic imaging data
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#nonlinear-and-or-time-warping-methods-for-intersubject-correlations">
+     Nonlinear and/or time-warping methods for intersubject correlations
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#questions">
+   Questions
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#acknowledgements">
+   Acknowledgements
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
               <div>
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="overview">
@@ -297,6 +372,7 @@
 <li><p>Advancing theory development based on computational approaches</p></li>
 <li><p>Providing a forum for trainees of all levels to develop and explore new computational/analytic skills.</p></li>
 </ol>
+<p>The top submissions will have an opportunity to present their project as an oral presentation at <a class="reference external" href="https://socialaffectiveneuro.org/conference/">SANS 2022</a> and will share a $5,000 prize from the Consortium for Interacting Minds at Dartmouth College.</p>
 <p>While we are framing this challenge as a competition, we hope that this will be a positive experience for everyone involved.</p>
 <div class="section" id="judging-criteria">
 <h2>Judging Criteria<a class="headerlink" href="#judging-criteria" title="Permalink to this headline">¶</a></h2>
@@ -307,6 +383,14 @@
 <li><p>The connection between analysis approach and social and affective neuroscience theory/topics (What does this tell us about the brain or mind?)</p></li>
 <li><p>Robustness and replicability of results. (How robust are the results relative to the analytic choices? How much did you overfit your analysis to the dataset?)</p></li>
 </ol>
+<p>The judging panel includes:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="http://cosanlab.com/">Luke Chang</a> - Dartmouth College</p></li>
+<li><p><a class="reference external" href="https://thefinnlab.github.io/">Emily Finn</a> - Dartmouth College</p></li>
+<li><p><a class="reference external" href="http://csnlab.org/">Carolyn Parkinson</a> - University of California Los Angeles</p></li>
+<li><p><a class="reference external" href="https://csng.rbind.io/">Jim Thompson</a> - George Mason University</p></li>
+<li><p><a class="reference external" href="http://scraplab.org/">Mark Thornton</a> - Dartmouth College</p></li>
+</ul>
 <p>Winners and prizes will be announced during the computational symposium at the 2022 SANS conference. Entrants are also welcome to opt-out of the competition and enter just for fun/learning.</p>
 </div>
 <div class="section" id="how-to-enter-the-challenge">
@@ -314,10 +398,10 @@
 <ol class="simple">
 <li><p>First, download the FridayNightLights_Study2 Dataset dataset <a class="reference internal" href="Download_Data.html"><span class="doc">here</span></a>:</p></li>
 <li><p>If you are new to naturalistic data processing, we encourage you to try applying methods described in the <a class="reference external" href="https://naturalistic-data.org">Naturalistic Data Analysis tutorials</a></p></li>
-<li><p>Form a team, or work solo. Once you are ready, register your team/individual entry. Registration is free, and will open March 4th, 2022. You may enter as late as the day of submission.</p></li>
+<li><p>Form a team, or work solo. Once you are ready, register your team/individual entry. Registration is free, and is now open. You may enter as late as the day of submission.</p></li>
 <li><p>To be a participant in the competition, at least one member of your team will need to register for the main <a class="reference external" href="https://socialaffectiveneuro.org/conference/#registration">SANS 2022 Conference</a>. In addition, you will need to register for the main conference to attend the computational symposium where winners, prizes, and more will be announced.</p></li>
 <li><p>Post questions to the <a class="reference external" href="https://www.askpbs.org/c/compsan-data-competition/25">CompSAN Discourse Page</a>.</p></li>
-<li><p>Submit a poster and extended abstract (3 pages), and notebook/matlab script (w details on associated dependencies). The abstract should include separate sections for background, methods, results and conclusions. Entrants will have the option of making their notebook/scripts publicly available. The deadline for submissions is April 2nd, 2022. At the time of submission, you will be given the opportunity to opt-out of competition.</p></li>
+<li><p>Submit a poster and extended abstract (3 pages), and notebook/matlab script (w details on associated dependencies). The abstract should include separate sections for background, methods, results and conclusions. Entrants will have the option of making their notebook/scripts publicly available. The deadline for submissions has been extended to midnight (EST) on April 15th (Originally 4/2/22). At the time of submission, you will be given the opportunity to opt-out of competition.</p></li>
 <li><p>Especially important for trainees (at all stages): complete a survey on your learning experience and the challenges you faced.</p></li>
 </ol>
 </div>
@@ -374,58 +458,38 @@
 
               </div>
               
-        
             
-
-
-
-<div class='prev-next-bottom'>
-    
-     <div id="next">
-        <a class="right-next" href="Download_Data.html" title="next page">
-            <div class="prevnext-info">
-                <p class="prevnext-label">next</p>
-                <p class="prevnext-title">Accessing Data</p>
-            </div>
-            <i class="prevnext-label fas fa-angle-right"></i>
-        </a>
-     </div>
-
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='right-next' id="next-link" href="Download_Data.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Accessing Data</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
 </div>
-        
+            
         </div>
     </div>
     <footer class="footer">
-    <div class="container">
-      <p>
-        
-          By Luke Chang, Mark Thornton, James Thompson<br/>
-        
-            &copy; Copyright 2022.<br/>
-          <div class="extra_footer">
-            This competition is supported by The Dartmouth Consortium for Interacting Minds and an NSF CAREER Award 1848370 to <a href='http://cosanlab.com'>Luke Chang</a>.
-          </div>
-      </p>
-    </div>
-  </footer>
+  <p>
+    
+      By Luke Chang, Mark Thornton, James Thompson<br/>
+    
+        &copy; Copyright 2022.<br/>
+      <div class="extra_footer">
+        This competition is supported by The Dartmouth Consortium for Interacting Minds and an NSF CAREER Award 1848370 to <a href='http://cosanlab.com'>Luke Chang</a> <img='https://compsan.org/sans_data_competition/images/logo/CSAN_Logo.svg' width=300>.
+      </div>
+  </p>
+</footer>
 </main>
 
 
       </div>
     </div>
   
-  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
-
-  
-<script async="" src="https://www.google-analytics.com/analytics.js"></script>
-<script>
-                        window.ga = window.ga || function () {
-                            (ga.q = ga.q || []).push(arguments) };
-                        ga.l = +new Date;
-                        ga('create', 'UA-138270939-1', 'auto');
-                        ga('set', 'anonymizeIp', true);
-                        ga('send', 'pageview');
-                    </script>
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
 
   </body>
 </html>
