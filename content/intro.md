@@ -8,7 +8,7 @@ The goals of the challenge include:
 2. Advancing theory development based on computational approaches
 3. Providing a forum for trainees of all levels to develop and explore new computational/analytic skills. 
 
-The top submissions will have an opportunity to present their project as an oral presentation at [SANS 2022](https://socialaffectiveneuro.org/conference/) and will share a $5,000 prize from the Consortium for Interacting Minds at Dartmouth College. 
+The top submissions will have an opportunity to present their project as an oral presentation during the Methods/Computational symposium at SANS 2022, to be held on May 5th, 2022 at 3.30-5pm US EDT/12.30-2pm US PDT (https://socialaffectiveneuro.org/conference/) and will share a $5,000 prize from the Consortium for Interacting Minds at Dartmouth College. 
 
 While we are framing this challenge as a competition, we hope that this will be a positive experience for everyone involved.
 
