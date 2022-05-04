@@ -1,0 +1,338 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Abstracts &#8212; SANS 2022 Data Competition</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="Submission" href="Submission.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+<script async="" src="https://www.google-analytics.com/analytics.js"></script>
+<script>
+                        window.ga = window.ga || function () {
+                            (ga.q = ga.q || []).push(arguments) };
+                        ga.l = +new Date;
+                        ga('create', 'UA-138270939-1', 'auto');
+                        ga('set', 'anonymizeIp', true);
+                        ga('send', 'pageview');
+                    </script>
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/CSAN_Logo.svg" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">SANS 2022 Data Competition</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Information
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Download_Data.html">
+   Accessing Data
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Registration.html">
+   Registration
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Submission.html">
+   Submission
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Abstracts
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Additional Resources
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference external" href="https://dartbrains.org/content/Introduction_to_Programming.html">
+   Introduction to Programming in Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference external" href="https://dartbrains.org/content/Introduction_to_Pandas.html">
+   Introduction to Pandas
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference external" href="https://dartbrains.org/content/Introduction_to_Plotting.html">
+   Introduction to Plotting in Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference external" href="https://dartbrains.org/content/Introduction_to_Neuroimaging_Data.html">
+   Introduction to Neuroimaging Data with Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference external" href="https://dartbrains.org/">
+   Dartbrains Neuroimaging Course
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference external" href="http://naturalistic-data.org/">
+   Naturalistic Data Analysis Course
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Post questions to <a href='https://www.askpbs.org/c/compsan-data-competition'>CompSAN Discourse</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/content/Abstracts.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/computational-san/sans_data_competition"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/computational-san/sans_data_competition/issues/new?title=Issue%20on%20page%20%2Fcontent/Abstracts.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        <a class="edit-button" href="https://github.com/computational-san/sans_data_competition/edit/master/content/Abstracts.md"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Abstracts</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="abstracts">
+<h1>Abstracts<a class="headerlink" href="#abstracts" title="Permalink to this headline">¶</a></h1>
+<p>There were six entries to the 2022 SANS Naturalistic fMRI Data Challenge, plus one that was not competing. Extended abstracts, posters, and code are linked below:</p>
+<p>Huang J, Chwe JA, Tarder-Stoll H, Durkin C, Dimsdale-Zucker H, Baldassano C. Individual differences in the timing of neural event patterns during emotional stimuli. <a class="reference external" href="https://drive.google.com/file/d/1mIViGYYX7JEEsBwg_32zlj7T7x6XYRXJ/view?usp=sharing">Extended Abstract</a> <a class="reference external" href="https://drive.google.com/file/d/1HKz6RO41TRN6PD_T9JcSeQ8qx7s7dbMW/view?usp=sharing">Poster</a> <a class="reference external" href="https://drive.google.com/drive/folders/1HHdZ7v8BGuIGHAo3PWi6zu84fxu-WxBM?usp=sharing">Code</a></p>
+<p>Kakalec P, Shaffer LSS, Roy B, Izquierdo AM, Thompson JC. Amygdala and dmPFC input modulates state dynamics of vmPFC during a naturalistic viewing task. <a class="reference external" href="https://drive.google.com/file/d/1jmKZsnlLM4W50a1NT7tNtRpSF_VVdpby/view?usp=sharing">Extended Abstract</a> <a class="reference external" href="https://github.com/CompSocNeuroGroup/CSNG-SANS-data-challenge.git">Code</a> Not Competing</p>
+<p>Ke J, Leong YC. Affective experience predicts narrative engagement during naturalistic viewing. <a class="reference external" href="https://drive.google.com/file/d/1_wogV4tfSzYgZ9DklvkBW51JSbrYA3TV/view?usp=sharing">Extended Abstract</a> <a class="reference external" href="https://drive.google.com/file/d/1YvghWY_p9Gl-eOJcDkQj5dU5-pt7ikmo/view?usp=sharing">Poster</a></p>
+<p>Letrou A, Busch EL, Turk-Browne NB. Relating neural dynamics and meotion dynamics with nonlinear manifold learning. <a class="reference external" href="https://drive.google.com/file/d/1fH4HTb5_ezJydgbnQxh4UQXcRN9THCcJ/view?usp=sharing">Extended Abstract</a> <a class="reference external" href="https://drive.google.com/file/d/1fdTntqzmVF-kv6s3fpgTHstdJZOCMLcC/view?usp=sharing">Poster</a> <a class="reference external" href="https://drive.google.com/drive/folders/1uUWx3VrnM1ZZEAzcoLSn3ReCUnbBUBjs">Code</a></p>
+<p>Liu Y, Li J, Wisnowski JL, Joshi AA. Brain network decomposition for SANS Naturalistic fMRI Challenge. [https://drive.google.com/file/d/1Jhj_ELP9offcN4X_lYu_KkD1btW8xhUP/view?usp=sharing) <a class="reference external" href="https://drive.google.com/file/d/1Qse-o9goB37DMvo-zHJVJAY0HJbF-4nO/view?usp=sharing">Poster</a> <a class="reference external" href="https://github.com/snapfinger/SANS22_fMRI_challenge">Code</a></p>
+<p>Merchant JS, Rhoads SA, Xie O, Dziura S. Exploratory visual and social relationship models correlate with neural responses to face identity during naturalistic viewing. <a class="reference external" href="https://drive.google.com/file/d/1NSVo-j2yYhc9An97GkMwaE7RhZ-EIWq-/view?usp=sharing">Extended Abstract</a> <a class="reference external" href="https://drive.google.com/file/d/1nlxeUANpgpLYHHIljy6Rg2wsldfXSju7/view?usp=sharing">Poster</a> <a class="reference external" href="https://github.com/JunaidMerchant/CompSAN2022_DCteam">Code</a></p>
+<p>Ye J, Sun H, Goa S, Peterson H, Scheinost D. Association between task-based brain states recruitment and affective experiences during naturalistic viewing. <a class="reference external" href="https://drive.google.com/file/d/1gYJ-PAm4kGSmWMQYhViqJEyk61QvfEnR/view?usp=sharing">Extended Abstract</a> <a class="reference external" href="https://drive.google.com/file/d/1YZQF3WuNNILE8ZCijj54xnANwg3tjPnA/view?usp=sharing">Poster</a> <a class="reference external" href="https://drive.google.com/drive/folders/1XiS3KDV83PPAw1m4SgysDTMry6DpE40c?usp=sharing">Code</a></p>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./content"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="Submission.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Submission</p>
+        </div>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By Luke Chang, Mark Thornton, James Thompson<br/>
+    
+        &copy; Copyright 2022.<br/>
+      <div class="extra_footer">
+        This competition is supported by The Dartmouth Consortium for Interacting Minds and an NSF CAREER Award 1848370 to <a href='http://cosanlab.com'>Luke Chang</a> <img='https://github.com/computational-san/sans_data_competition/blob/main/images/logo/cim_logo.svg' width=300>.
+      </div>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

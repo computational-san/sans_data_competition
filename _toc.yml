@@ -6,6 +6,7 @@ parts:
   - file: content/Download_Data
   - file: content/Registration
   - file: content/Submission
+  - file: content/Abstracts
 - caption: Additional Resources
   chapters:
   - url: https://dartbrains.org/content/Introduction_to_Programming.html
